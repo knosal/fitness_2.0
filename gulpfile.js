@@ -6,14 +6,6 @@ import { copy, copyImages, copySvg } from './gulp/copyAssets.mjs';
 import {compileMainMinScripts, compileMainScripts, compileVendorScripts} from './gulp/compileScripts.mjs';
 import {optimizeSvg, sprite, createWebp, optimizePng, optimizeJpg} from './gulp/optimizeImages.mjs';
 
-const ghPages = require('gh-pages');
-const path = require('path');
-
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
-
 const server = browserSync.create();
 const streamStyles = () => compileStyles().pipe(server.stream());
 
