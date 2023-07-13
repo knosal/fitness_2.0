@@ -4,16 +4,11 @@
   padding: 24px 42px;
 
   color: $color-default-white;
-  word-break: break-word;
 
   background-color: transparent;
-  border: none;
-  outline-offset: 3px;
   cursor: pointer;
 
   transition: opacity $trans-default;
-
-  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;

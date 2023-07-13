@@ -1,34 +1,64 @@
 .header {
-  &__wrapper {
-    position: relative;
+  @include vp-1199 {
+    margin-bottom: 25px;
   }
 
-  &__inner {
-    position: absolute;
-    top: 0;
-    z-index: 5;
+  @include vp-767 {
+    margin-bottom: 23px;
+  }
 
+  &__wrapper {
     display: flex;
+    gap: 10px 30px;
     justify-content: space-between;
+    padding-top: 30px;
     align-items: center;
-    width: 100%;
-    padding: 35px 0;
 
-    @include vp-319 {
-      padding: 15px 0;
+    @include vp-1199 {
+      padding-top: 37px;
+    }
+
+    @include vp-767 {
+      padding-top: 15px;
     }
   }
 
-  &__user-link {
-    font-weight: 600;
-    font-size: 26px;
-    font-family: $ff-alumni;
-    color: $color-default-white;
-    letter-spacing: 0.78px;
+  &__logo {
+    margin-right: 30px;
+  }
 
-    @include vp-319 {
-      font-size: 20px;
-      letter-spacing: 0.4px;
+  &__user {
+    align-self: flex-start;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: $ff-alumni;
+
+    &-link {
+      color: $color-default-white;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: 0.7px;
+
+      @include hover-focus {
+        opacity: 0.8;
+      }
+
+      @include vp-1199 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+
+      @include vp-767 {
+        letter-spacing: 0.4px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 }
