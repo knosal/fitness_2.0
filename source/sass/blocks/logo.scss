@@ -1,0 +1,11 @@
+.logo {
+  flex-shrink: 0;
+  max-width: 122px;
+
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}

@@ -1,8 +1,15 @@
 .btn {
-  display: inline-flex;
-  padding: 22px 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 56px;
 
+  font-weight: 700;
+  font-size: 12px;
+  font-family: $ff-roboto;
   color: $color-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 
   background-color: $color-default-white;
   border: 2px solid $color-primary;
@@ -17,7 +24,6 @@
     border: none;
     opacity: 1;
   }
-
   @include active {
     opacity: 0.7;
 
@@ -41,7 +47,6 @@
 
       background-color: $color-default-white;
     }
-
     @include active {
       color: $color-primary;
 
@@ -53,5 +58,19 @@
 
       pointer-events: none;
     }
+  }
+
+  &--intro {
+    @include vp-767 {
+      width: 186px;
+      padding: 26px 30px;
+
+      letter-spacing: 0.6px;
+    };
+    @include vp-319 {
+      width: 100%;
+      padding-top: 19px;
+      padding-bottom: 19px;
+    };
   }
 }

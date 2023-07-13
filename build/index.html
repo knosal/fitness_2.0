@@ -11,6 +11,8 @@
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" />
     <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
@@ -18,14 +20,112 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <h1 class="visually-hidden">Фитнесс центр SyperGym</h2>
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__inner">
+              <div class="logo">
+                <a class="logo__link" href="#" aria-label="Логотип SyperGym">
+                  <picture>
+                    <source media="(max-width: 320px)" srcset="img/logotype-mobile.png" width="67" height="13" />
+                    <source media="(max-width: 768px)" srcset="img/logotype-tablet.png" width="82" height="17" />
+                    <img src="img/logotype-desktop.png" srcset="img/logotype-desktop.png" width="122" height="44" alt="Логотип SyperGym" />
+                  </picture>
+                </a>
+              </div>
+              <div class="header__user">
+                <a class="header__user-link" href="tel:8-800-555-55-55">8-800-555-55-55</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
-        <div class="container"></div>
+        <section class="intro">
+          <h2 class="visually-hidden">Фитнес центр SyperGymintro</h2>
+          <div class="container">
+            <div class="intro__wrapper">
+              <div class="intro__info">
+                <p class="intro__city">Омск</p>
+                <p class="intro__title">Фитнес центр</p>
+                <ul class="intro__list-training list-training">
+                  <li class="list-training__item">Тренажерный зал</li>
+                  <li class="list-training__item">Групповые занятия</li>
+                  <li class="list-training__item">Кардио-зона</li>
+                </ul>
+                <button class="intro__buy btn btn--intro btn--back-background">Купить абонемент</button>
+              </div>
+              <div class="intro__hero">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="img/intro/intro-tablet.jpg 1x, img/intro/intro-tablet@2x.jpg 2x" width="324" height="390">
+                  <img src="img/intro/intro-desktop.jpg" srcset="img/intro/intro-desktop@2x.jpg 2x" width="500" height="556" alt="">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="navigation-footer__logo logo">
+              <a class="logo__link" href="#" aria-label="Логотип SyperGym">
+                <picture>
+                  <source media="(max-width: 320px)" srcset="img/logotype-mobile.png" width="67" height="13" />
+                  <source media="(max-width: 768px)" srcset="img/logotype-tablet.png" width="82" height="17" />
+                  <img src="img/logotype-desktop.png" srcset="img/logotype-desktop.png" width="122" height="44" alt="Логотип SyperGym" />
+                </picture>
+              </a>
+            </div>
+            <nav class="navigation-footer">
+              <ul class="navigation-footer__list">
+                <li class="navigation-footer__item">
+                  <a class="navigation-footer__link" href="#">Услуги</a>
+                </li>
+                <li class="navigation-footer__item">
+                  <a class="navigation-footer__link" href="#">Абонементы</a>
+                </li>
+                <li class="navigation-footer__item">
+                  <a class="navigation-footer__link" href="#">Акции</a>
+                </li>
+                <li class="navigation-footer__item">
+                  <a class="navigation-footer__link" href="#">Тренеры</a>
+                </li>
+                <li class="navigation-footer__item">
+                  <a class="navigation-footer__link" href="#">Расписание</a>
+                </li>
+              </ul>
+            </nav>
+            <section class="navigation-footer__socials socials">
+              <h2 class="visually-hidden">Социальные сети</h2>
+              <ul class="socials__list">
+                <li class="socials__item">
+                  <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте">
+                    <svg width="25" height="25">
+                      <use xlink:href="img/sprite/stack.svg#social-vk-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link socials__link--ok" href="#" aria-label="Одноклассники">
+                    <svg width="25" height="25">
+                      <use xlink:href="img/sprite/stack.svg#social-ok-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link socials__link--reddit" href="#" aria-label="Reddit">
+                    <svg width="25" height="25">
+                      <use xlink:href="img/sprite/stack.svg#social-reddit-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
       </footer>
     </div>
 

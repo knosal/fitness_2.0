@@ -1,0 +1,35 @@
+.header {
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 35px 0;
+
+    @include vp-319 {
+      padding: 15px 0;
+    };
+  }
+
+  &__user-link {
+    font-weight: 600;
+    font-size: 26px;
+    font-family: $ff-alumni;
+    color: $color-default-white;
+    letter-spacing: 0.78px;
+
+    @include vp-319 {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    };
+  }
+}
