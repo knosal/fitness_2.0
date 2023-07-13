@@ -1,5 +1,4 @@
 .header {
-
   &__wrapper {
     position: relative;
   }
@@ -17,7 +16,7 @@
 
     @include vp-319 {
       padding: 15px 0;
-    };
+    }
   }
 
   &__user-link {
@@ -30,6 +29,6 @@
     @include vp-319 {
       font-size: 20px;
       letter-spacing: 0.4px;
-    };
+    }
   }
 }

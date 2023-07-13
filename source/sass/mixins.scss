@@ -1,9 +1,53 @@
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
+// RESET
+@mixin link-reset {
+  color: $color-default-black;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+@mixin button-reset {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@mixin li-reset-last-el {
+  &:last-child {
+    margin: 0;
   }
 }
 
+@mixin fieldset-reset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  appearance: none;
+}
+
+// TITLE
+@mixin title($f-size: 54px, $l-spacing: 1.62px) {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 54px;
+  line-height: normal;
+  font-family: $ff-alumni;
+  color: $color-primary;
+  letter-spacing: $l-spacing;
+}
+
+//СОСТОЯНИЕ
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
@@ -36,6 +80,7 @@
   }
 }
 
+// VIEWPORTS
 // Desktop first
 
 @mixin vp-1919 {
@@ -86,7 +131,6 @@
   }
 }
 
-
 /* Mobile first
 
 // @mixin vp-375 {
@@ -129,3 +173,9 @@
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
 // этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
