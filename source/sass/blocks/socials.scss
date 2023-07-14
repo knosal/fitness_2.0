@@ -6,25 +6,62 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     gap: 11px;
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
+    min-width: 100px;
+    max-width: 100px;
     line-height: 0;
+
+    @include ul-reset;
+
+    @include vp-767 {
+      margin-top: 26px;
+      flex-wrap: nowrap;
+    }
+
+    @include vp-319 {
+      flex-wrap: wrap;
+    }
   }
 
-  &__item {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 25px;
     height: 25px;
 
     background-color: $color-default-white;
     border-radius: 50%;
-  }
 
-  &__link {
-    fill: $color-default-black;
+    &-icon {
+      fill: inherit;
+    }
+
+    @include hover-focus {
+      background-color: $color-egyptian-blue;
+
+      .socials__link-icon {
+        fill: $color-default-white;
+      }
+    }
+
+    @include active {
+      background-color: $color-sapphire;
+
+      .socials__link-icon {
+        fill: $color-default-white;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.3;
+
+      background-color: $color-default-white;
+
+      .socials__link-icon {
+        fill: $color-default-black;
+      }
+    }
   }
 }

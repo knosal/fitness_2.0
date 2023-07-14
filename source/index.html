@@ -46,9 +46,12 @@
                   <li class="intro__list-item">Групповые занятия</li>
                   <li class="intro__list-item">Кардио-зона</li>
                 </ul>
-                <h1 class="intro__title">Фитнес центр</h1>
+                <h1 class="intro__title">
+                  Фитнес <br />
+                  центр
+                </h1>
               </div>
-              <a class="intro__buy btn" href="#subscription">Купить абонемент</a>
+              <a class="intro__buy btn btn--empty" href="#subscription">Купить абонемент</a>
             </div>
 
             <div class="intro__hero">
@@ -67,17 +70,15 @@
 
       <footer class="footer">
         <div class="footer__wrapper container">
-          <div class="navigation-footer__logo logo">
+          <div class="footer__logo logo logo--footer">
             <a class="logo__link" href="#" aria-label="Логотип SyperGym">
-              <picture>
-                <source media="(max-width: 320px)" srcset="img/logotype-mobile.png" width="67" height="13" />
-                <source media="(max-width: 768px)" srcset="img/logotype-tablet.png" width="82" height="17" />
-                <img src="img/logotype-desktop.png" srcset="img/logotype-desktop.png" width="122" height="44" alt="Логотип SyperGym" />
-              </picture>
+              <svg width="88" height="32" focusable="false" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#logotype"></use>
+              </svg>
             </a>
           </div>
 
-          <nav class="navigation-footer">
+          <nav class="footer__navigation navigation-footer">
             <ul class="navigation-footer__list">
               <li class="navigation-footer__item">
                 <a class="navigation-footer__link" href="#">Услуги</a>
@@ -97,27 +98,27 @@
             </ul>
           </nav>
 
-          <div class="navigation-footer__socials socials">
+          <div class="footer__socials socials">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="socials__list">
               <li class="socials__item">
                 <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте">
-                  <svg width="25" height="25">
-                    <use xlink:href="img/sprite/stack.svg#social-vk-icon"></use>
+                  <svg class="socials__link-icon" width="12" height="7">
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link socials__link--ok" href="#" aria-label="Одноклассники">
-                  <svg width="25" height="25">
-                    <use xlink:href="img/sprite/stack.svg#social-ok-icon"></use>
+                  <svg class="socials__link-icon" width="9" height="16">
+                    <use xlink:href="img/sprite.svg#ok"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link socials__link--reddit" href="#" aria-label="Reddit">
-                  <svg width="25" height="25">
-                    <use xlink:href="img/sprite/stack.svg#social-reddit-icon"></use>
+                  <svg class="socials__link-icon" width="14" height="14">
+                    <use xlink:href="img/sprite.svg#reddit"></use>
                   </svg>
                 </a>
               </li>

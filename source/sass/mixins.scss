@@ -1,11 +1,4 @@
 // RESET
-@mixin link-reset {
-  color: $color-default-black;
-  text-decoration: none;
-
-  cursor: pointer;
-}
-
 @mixin button-reset {
   background-color: transparent;
   border: none;
@@ -16,7 +9,7 @@
 @mixin ul-reset {
   margin: 0;
   padding: 0;
-
+  flex-shrink: 0;
   list-style-type: none;
 }
 
@@ -43,7 +36,7 @@
   font-size: 54px;
   line-height: normal;
   font-family: $ff-alumni;
-  color: $color-primary;
+  color: $color-sapphire;
   letter-spacing: $l-spacing;
 }
 
@@ -51,6 +44,10 @@
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
+      outline: none;
+      transform: translateY(-1px);
+
+      transition: all 0.3s ease;
       @content;
     }
   }
@@ -58,12 +55,20 @@
 
 @mixin focus {
   &.focus-visible:focus {
+    outline: none;
+    transform: translateY(-1px);
+
+    transition: all 0.3s ease;
     @content;
   }
 }
 
 @mixin active {
   &.focus-visible:active {
+    outline: none;
+    transform: translateY(-1px);
+
+    transition: all 0.3s ease;
     @content;
   }
 }
@@ -71,6 +76,10 @@
 @mixin hover-focus {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
+      outline: none;
+      transform: translateY(-1px);
+
+      transition: all 0.3s ease;
       @content;
     }
   }

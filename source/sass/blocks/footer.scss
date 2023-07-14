@@ -1,9 +1,34 @@
 .footer {
+  display: flex;
+  align-items: center;
+  min-height: 108px;
   background-color: $color-black-russian;
 
   &__wrapper {
     display: flex;
+    max-width: 1366px;
+    align-items: center;
     justify-content: space-between;
-    padding: 49px;
+    gap: 100px;
+    padding-top: 44px;
+    padding-bottom: 32px;
+
+    @include vp-1199 {
+      max-width: 100%;
+      gap: 50px;
+    }
+
+    @include vp-767 {
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 0;
+    }
+  }
+
+  &__navigation {
+    @include vp-767 {
+      width: 100%;
+    }
   }
 }
