@@ -34,9 +34,20 @@
   margin: 0;
 
   font-weight: 600;
-  font-size: 54px;
+  font-size: $f-size;
   line-height: normal;
   font-family: $ff-alumni;
+  color: $color-sapphire;
+  letter-spacing: $l-spacing;
+}
+
+@mixin title-h3($f-size: 22px, $l-spacing: 150%) {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: $f-size;
+  line-height: normal;
+  font-family: $ff-roboto;
   color: $color-sapphire;
   letter-spacing: $l-spacing;
 }
@@ -93,50 +104,50 @@
 // VIEWPORTS
 // Desktop first
 
-@mixin vp-1919 {
+@mixin vp-1920 {
   @media (max-width: ($vp-1920 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-1439 {
+@mixin vp-1440 {
   @media (max-width: ($vp-1440 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-1279 {
+@mixin vp-1280 {
   @media (max-width: ($vp-1280 - 1px)) {
     @content;
   }
 }
 
 @mixin vp-1200 {
-  @media (max-width: ($vp-1200)) {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
 
 @mixin vp-1024 {
-  @media (max-width: ($vp-1024)) {
+  @media (max-width: ($vp-1024 - 1px)) {
     @content;
   }
 }
 
 @mixin vp-768 {
-  @media (max-width: ($vp-768)) {
+  @media (max-width: ($vp-768 - 1px)) {
     @content;
   }
 }
 
 @mixin vp-375 {
-  @media (max-width: ($vp-375)) {
+  @media (max-width: ($vp-375 - 1px)) {
     @content;
   }
 }
 
 @mixin vp-320 {
-  @media (max-width: ($vp-320)) {
+  @media (max-width: ($vp-320 - 1px)) {
     @content;
   }
 }

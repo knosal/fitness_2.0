@@ -83,12 +83,74 @@
                 <a class="video__link" data-video-link href="#">
                   <picture>
                     <source type="image/webp" srcset="img/gym-video.webp 1x, img/gym-video@2x.webp 2x" />
-                    <img class="video__media" srcset="img/gym-video@2x.jpg 2x" src="" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
+                    <img srcset="img/gym-video@2x.jpg 2x" src="" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
                   </picture>
                 </a>
                 <button class="video__button no-js" type="button" data-video-button aria-label="Запустить видео">
                   <img src="img/svg/video-button.svg" width="100" height="100" />
                 </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="memberships" id="subscription">
+          <div class="memberships__wrapper container">
+            <h2 class="memberships__title title-h2">Абонементы</h2>
+
+            <div class="memberships__controls">
+              <button class="memberships__button memberships__button--current" type="button" data-tab="1" aria-label="1 месяц">1 месяц</button>
+              <button class="memberships__button" type="button" data-tab="1" aria-label="1 месяц">6 месяцев</button>
+              <button class="memberships__button" type="button" data-tab="1" aria-label="1 месяц">12 месяцев</button>
+            </div>
+
+            <div class="memberships__content subscriptions">
+              <ul class="subscriptions__list" data-list="1">
+                <li class="subscriptions__item">
+                  <h3 class="subscriptions__title">С тренером</h3>
+                  <p class="subscriptions__description">12 занятий</p>
+                  <span class="subscriptions__price-max">5000 </span>
+                  <span class="subscriptions__price-min"
+                    >5000
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </span>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item subscriptions__item--current">
+                  <h3 class="subscriptions__title">Дневной</h3>
+                  <p class="subscriptions__description">с 8:00 до 17:00</p>
+                  <span class="subscriptions__price-max">1700 </span>
+                  <span class="subscriptions__price-min"
+                    >1700
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </span>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item">
+                  <h3 class="subscriptions__title">Полный день</h3>
+                  <p class="subscriptions__description">с 8:00 до 22:00</p>
+                  <span class="subscriptions__price-max">2700 </span>
+                  <span class="subscriptions__price-min"
+                    >2700
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </span>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+              </ul>
+              <div class="subscriptions__background-pictire">
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/pancakes-tablet.webp 1x, img/pancakes-tablet@2x.webp 2x" width="289" height="345" />
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/pancakes.webp 1x, img/pancakes@2x.webp 2x" width="341" height="384" />
+
+                  <source media="(max-width: 768px)" srcset="img/pancakes-tablet.jpg 1x, img/pancakes-tablet@2x.jpg 2x" width="289" height="345" />
+                  <img src="img/pancakes.jpg" srcset="img/pancakes@2x.jpg 2x" width="341" height="384" loading="lazy" alt="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург." />
+                </picture>
               </div>
             </div>
           </div>
