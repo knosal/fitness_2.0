@@ -17,6 +17,7 @@
       transition: $trans-default;
     }
   }
+
   @include vp-1199 {
     top: 100%;
     left: 50%;
@@ -24,6 +25,7 @@
     width: 266px;
     height: 167px;
   }
+
   @include vp-767 {
     position: static;
 
@@ -70,6 +72,7 @@
   @include focus {
     outline: 2px solid;
   }
+
   @include vp-1199 {
     width: 73px;
     height: 73px;
