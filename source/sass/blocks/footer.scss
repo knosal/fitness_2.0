@@ -13,12 +13,12 @@
     padding-top: 44px;
     padding-bottom: 32px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       max-width: 100%;
       gap: 50px;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       position: relative;
       flex-wrap: wrap;
       justify-content: start;
@@ -27,7 +27,7 @@
   }
 
   &__navigation {
-    @include vp-767 {
+    @include vp-768 {
       width: 100%;
     }
   }

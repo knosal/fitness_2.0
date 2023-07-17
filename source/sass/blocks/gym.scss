@@ -1,11 +1,11 @@
 .gym {
   min-height: 636px;
 
-  @include vp-1199 {
+  @include vp-1200 {
     min-height: 754px;
   }
 
-  @include vp-767 {
+  @include vp-768 {
     min-height: 860px;
   }
 }
@@ -18,18 +18,18 @@
 
   grid-template-columns: auto 1fr;
 
-  @include vp-1199 {
+  @include vp-1200 {
     align-items: center;
 
     grid-template-columns: 1fr;
     row-gap: 50px;
   }
 
-  @include vp-767 {
+  @include vp-768 {
     row-gap: 40px;
   }
 
-  @include vp-319 {
+  @include vp-320 {
     padding: 0;
   }
 }
@@ -40,16 +40,16 @@
   margin-top: 49px;
   margin-left: 58px;
 
-  @include vp-1199 {
+  @include vp-1200 {
     align-items: center;
     margin: 0;
   }
 
-  @include vp-767 {
+  @include vp-768 {
     align-items: flex-start;
   }
 
-  @include vp-319 {
+  @include vp-320 {
     padding: 0 15px;
   }
 }
@@ -57,12 +57,12 @@
 .title-h2 {
   @include title-h2;
 
-  @include vp-1199 {
+  @include vp-1200 {
     font-size: 42px;
     letter-spacing: 1.26px;
   }
 
-  @include vp-767 {
+  @include vp-768 {
     font-size: 32px;
     letter-spacing: 0.96px;
   }
@@ -79,7 +79,7 @@
   font-family: $ff-roboto;
   color: $color-sapphire;
 
-  @include vp-1199 {
+  @include vp-1200 {
     display: flex;
     align-items: center;
     max-width: 502px;
@@ -93,7 +93,7 @@
     }
   }
 
-  @include vp-767 {
+  @include vp-768 {
     text-align: start;
   }
 
@@ -101,14 +101,14 @@
     margin-top: 25px;
     margin-bottom: 55px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       margin-top: 5px;
       margin-bottom: 50px;
 
       font-weight: 400;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       margin-top: 20px;
       margin-bottom: 40px;
     }
@@ -118,7 +118,7 @@
 .gym__appearance {
   position: relative;
 
-  @include vp-1199 {
+  @include vp-1200 {
     margin-bottom: 183px;
   }
 

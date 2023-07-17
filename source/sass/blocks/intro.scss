@@ -6,13 +6,13 @@
     justify-content: center;
     column-gap: 64px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       column-gap: 30px;
       padding-bottom: 50px;
       grid-template-columns: 1fr 1fr;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       grid-template-columns: 1fr;
       padding: 0 15px;
     }
@@ -21,11 +21,11 @@
       margin-top: -29px;
       object-fit: cover;
 
-      @include vp-1199 {
+      @include vp-1200 {
         margin-top: -9px;
       }
 
-      @include vp-767 {
+      @include vp-768 {
         display: none;
       }
     }
@@ -39,7 +39,7 @@
     font-family: $ff-alumni;
     margin-top: 80px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       margin-top: 40px;
     }
   }
@@ -52,14 +52,14 @@
     line-height: 57px;
     font-weight: 600;
 
-    @include vp-1199 {
+    @include vp-1200 {
       font-size: 34px;
       line-height: 41px;
       margin-right: 7px;
       margin-bottom: 10px;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       font-size: 28px;
       line-height: 33px;
       margin-right: 5px;
@@ -73,11 +73,11 @@
     width: 100%;
     gap: 0 16px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       gap: 0 24px;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       position: relative;
     }
   }
@@ -87,11 +87,11 @@
 
     @include ul-reset;
 
-    @include vp-1199 {
+    @include vp-1200 {
       margin-top: 32px;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       position: absolute;
       left: 0;
       top: 44px;
@@ -120,14 +120,14 @@
     line-height: 110px;
     width: 233px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       margin-bottom: 34px;
       font-size: 72px;
       line-height: 86px;
       text-transform: initial;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       margin-bottom: 22px;
       width: 200px;
       margin-left: auto;
@@ -137,11 +137,11 @@
   &__buy {
     margin-bottom: 10px;
 
-    @include vp-1199 {
+    @include vp-1200 {
       width: 185px;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       width: 100%;
     }
   }
@@ -150,7 +150,7 @@
     img {
       object-fit: cover;
 
-      @include vp-1199 {
+      @include vp-1200 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -159,7 +159,7 @@
       }
     }
 
-    @include vp-767 {
+    @include vp-768 {
       display: none;
     }
   }

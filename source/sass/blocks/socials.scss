@@ -13,12 +13,12 @@
 
     @include ul-reset;
 
-    @include vp-767 {
+    @include vp-768 {
       margin-top: 26px;
       flex-wrap: nowrap;
     }
 
-    @include vp-319 {
+    @include vp-320 {
       flex-wrap: wrap;
     }
   }
