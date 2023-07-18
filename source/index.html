@@ -145,13 +145,41 @@
               </ul>
               <div class="subscriptions__background-pictire">
                 <picture>
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/pancakes-tablet.webp 1x, img/pancakes-tablet@2x.webp 2x" width="289" height="345" />
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/pancakes-tablet.webp 1x, img/pancakes-tablet@2x.webp 2x" width="289" height="345" />
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/pancakes.webp 1x, img/pancakes@2x.webp 2x" width="341" height="384" />
 
-                  <source media="(max-width: 768px)" srcset="img/pancakes-tablet.jpg 1x, img/pancakes-tablet@2x.jpg 2x" width="289" height="345" />
-                  <img src="img/pancakes.jpg" srcset="img/pancakes@2x.jpg 2x" width="341" height="384" loading="lazy" alt="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург." />
+                  <source media="(max-width: 1199px)" srcset="img/pancakes-tablet.png 1x, img/pancakes-tablet@2x.png 2x" width="289" height="345" />
+                  <source media="(min-width: 1200px)" srcset="img/pancakes.png 1x, img/pancakes@2x.png 2x" width="341" height="384" />
+                  <img src="img/pancakes.png" srcset="img/pancakes@2x.png 2x" width="341" height="384" loading="lazy" alt="" />
                 </picture>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="event">
+          <div class="event__wrapper container">
+            <div class="event__current">
+              <div class="event__inner">
+                <h2 class="event__name">Super games</h2>
+                <div class="event__date">
+                  <p class="event__title event__title--short">Дата</p>
+                  <time class="event__value"
+                    >7
+                    <span class="event__month">Марта 2019</span>
+                  </time>
+                  <p class="event__title">Время</p>
+                  <time class="event__value">12:00 </time>
+                </div>
+              </div>
+              <p class="event__description">Ежегодные соревнования по Crossfit</p>
+              <a class="event__buy btn btn--empty" href="#!">Заполнить заявку</a>
+            </div>
+            <div class="event__promo">
+              <picture>
+                <source type="image/webp" srcset="img/event.webp 1x, img/event@2x.webp 2x" width="660" height="500" />
+                <img src="img/event.jpg" srcset="img/event@2x.jpg 2x" width="660" height="500" loading="lazy" alt="Промо предстоящего мероприятия" />
+              </picture>
             </div>
           </div>
         </section>

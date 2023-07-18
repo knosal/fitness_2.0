@@ -5,7 +5,7 @@
 
   background-color: $color-ghost-white;
 
-  img {
+  .subscriptions__background-pictire {
     content: "";
     position: absolute;
     right: 0;
@@ -20,8 +20,6 @@
     @include vp-1200 {
       right: 0;
       bottom: -177px;
-
-      width: 348px;
     }
 
     @include vp-768 {

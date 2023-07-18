@@ -32,6 +32,22 @@
   background-color: $color-default-white;
   border: 7px solid $color-transparent;
 
+  &--current {
+    border-image: $color-border-gradient;
+    border-image-slice: 1;
+    outline: none;
+
+    .subscriptions__buy {
+      padding: 26px 44px;
+
+      color: $color-default-white;
+
+      background: $color-button-gradient;
+      border: none;
+      outline: none;
+    }
+  }
+
   @include vp-1200 {
     min-width: 290px;
     max-width: 100%;
@@ -123,6 +139,7 @@
   z-index: 2;
 
   display: inline-block;
+  width: 170px;
 
   font-weight: 700;
   font-size: 60px;

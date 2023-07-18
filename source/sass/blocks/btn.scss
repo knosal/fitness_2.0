@@ -47,6 +47,11 @@
     @include focus {
       color: $color-sapphire;
     }
+
+    @include active {
+      background-color: $color-default-white;
+      color: $color-sapphire;
+    }
   }
 
   &--background {
