@@ -29,6 +29,12 @@
   appearance: none;
 }
 
+@mixin gradient-text {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(127.61deg, $color-crimson 0%, $color-cobalt 87.33%);
+  background-clip: text;
+}
+
 // TITLE
 @mixin title-h2($f-size: 54px, $l-spacing: 1.62px) {
   margin: 0;
