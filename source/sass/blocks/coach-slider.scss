@@ -1,0 +1,238 @@
+.coach {
+  @include vp-1200 {
+    min-height: 423px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 46px;
+    grid-column: 1/-1;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+
+    @include vp-1200 {
+      text-align: center;
+      margin-right: 5px;
+      margin-bottom: 32px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-768 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.coach__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 91px;
+
+  @include vp-1200 {
+    max-width: 656px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-768 {
+    max-width: 500px;
+    padding: 0 46px 70px;
+  }
+}
+
+.coach__inner {
+  position: relative;
+  min-height: 294px;
+  background-color: $color-grey;
+
+  @include vp-768 {
+    min-height: auto;
+  }
+
+  img {
+    width: 100%;
+    min-height: 294px;
+    object-fit: cover;
+
+    @include vp-1200 {
+      width: 268px;
+      max-height: 294px;
+    }
+
+    @include vp-768 {
+      min-height: 274px;
+      max-height: 100vw;
+      width: 100%;
+    }
+  }
+}
+
+.coach__description {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 50px 30px 23px;
+  background-color: none;
+  overflow-y: auto;
+
+  @include vp-1200 {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+
+  @include vp-768 {
+    padding: 41px 20px 48px;
+  }
+
+  h3 {
+    margin: auto auto 0;
+    color: $color-default-white;
+    font-size: 18px;
+    text-align: center;
+
+    @include vp-1200 {
+      padding-left: 6px;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: $color-sapphire;
+    opacity: 0.89;
+
+    .coach__info {
+      transform: scale(1);
+      transition: $trans-default;
+      height: 100%;
+    }
+
+    h3 {
+      margin: 4px 0 -4px;
+
+      @include vp-1200 {
+        margin-top: 3px;
+        padding-right: 14px;
+      }
+
+      @include vp-768 {
+        margin-bottom: -5px;
+        margin-top: 2px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.coach__info {
+  height: 0;
+  transform: scale(0);
+
+  p {
+    margin: 0;
+    text-align: center;
+    color: $color-spindle;
+
+    @include vp-1200 {
+      margin-left: -5px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 32px 0 0 41px;
+    list-style: none;
+    color: $color-default-white;
+
+    @include vp-1200 {
+      padding-left: 30px;
+    }
+
+    li {
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 13px;
+      font-size: 14px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 8px;
+        left: -15px;
+        width: 6px;
+        height: 6px;
+        background-color: $color-default-white;
+        border-radius: 50%;
+      }
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//slider
+
+.coach__slider {
+  margin: 0;
+}
+
+.coach__slider-inner {
+  gap: 40px;
+}
+
+.coach__slide {
+  width: 260px;
+}
+
+.coach__button-next,
+.coach__button-prev {
+  --swiper-navigation-size: 32px;
+  border: none;
+
+  @include vp-768 {
+    --swiper-navigation-size: 20px;
+  }
+}
+
+.coach__button-next {
+  top: 52%;
+  right: 46px;
+
+  @include vp-1200 {
+    top: 48%;
+    right: -14px;
+  }
+
+  @include vp-768 {
+    top: 51%;
+    right: 13px;
+  }
+}
+
+.coach__button-prev {
+  top: 52%;
+  left: 46px;
+
+  @include vp-1200 {
+    top: 48%;
+    left: -14px;
+  }
+
+  @include vp-768 {
+    top: 51%;
+    left: 13px;
+  }
+}

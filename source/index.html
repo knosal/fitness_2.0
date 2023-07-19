@@ -7,16 +7,19 @@
     <meta name="description" content="Фитнес центр Supergym" />
     <title>fitness_2.0</title>
     <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" />
-    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" />
-    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" />
+
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous" />
+    <link href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous" />
+    <link href="fonts/AlumniSans-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link href="fonts/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous" />
 
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
 
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body>
     <div class="wrapper">
@@ -26,7 +29,7 @@
             <div class="header__logo logo">
               <a class="logo__link" href="#" aria-label="Логотип SyperGym">
                 <svg width="122" height="44" focusable="false" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#logotype"></use>
+                  <use xlink:href="img/sprite/sprite.svg#logotype"></use>
                 </svg>
               </a>
             </div>
@@ -86,8 +89,8 @@
                     <img srcset="img/gym-video@2x.jpg 2x" src="" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
                   </picture>
                 </a>
-                <button class="video__button no-js" type="button" data-video-button aria-label="Запустить видео">
-                  <img src="img/svg/video-button.svg" width="100" height="100" />
+                <button class="video__button" type="button" data-video-button aria-label="Запустить видео">
+                  <img src="img/sprite/video-button.svg" width="100" height="100" />
                 </button>
               </div>
             </div>
@@ -113,7 +116,7 @@
                   <span class="subscriptions__price-min"
                     >5000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -125,7 +128,7 @@
                   <span class="subscriptions__price-min"
                     >1700
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -137,7 +140,7 @@
                   <span class="subscriptions__price-min"
                     >2700
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -183,6 +186,90 @@
             </div>
           </div>
         </section>
+
+        <section class="coach">
+          <div class="coach__wrapper container">
+            <button type="button" class="coach__button-prev swiper-button-prev btn btn--slider" aria-label="стрелка назад"></button>
+            <h2>Тренеры</h2>
+            <div class="swiper coach__slider">
+              <div class="swiper-wrapper coach__slider-inner">
+                <div class="coach__slide swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-anna.webp 1x, img/coach-anna@2x.webp 2x" src="img/coach-anna.jpg" width="260" height="294" alt="Анна Павлова" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Анна Павлова</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Информация Анны</li>
+                          <li>Информация Анны</li>
+                          <li>Информация Анны</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="coach__slide swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-alexey.webp 1x, img/coach-alexey@2x.webp 2x" src="img/coach-alexey.jpg" width="260" height="294" alt="Алексей Лавров" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Алексей Лавров</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Информация Алексея</li>
+                          <li>Информация Алексея</li>
+                          <li>Информация Алексея</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="coach__slide swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-alex.webp 1x, img/coach-alex@2x.webp 2x" src="img/coach-alex.jpg" width="260" height="294" alt="Александр Пашков" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Александр Пашков</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Certified Level&nbsp;3 Trainer</li>
+                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="coach__slide swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-mariya.webp 1x, img/coach-mariya@2x.webp 2x" src="img/coach-mariya.jpg" width="260" height="294" alt="Мария Кетова" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Мария Кетова</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Информация Марии</li>
+                          <li>Информация Марии</li>
+                          <li>Информация Марии</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="coach__button-next swiper-button-next btn btn--slider" aria-label="стрелка вперёд"></button>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
@@ -190,7 +277,7 @@
           <div class="footer__logo logo logo--footer">
             <a class="logo__link" href="#" aria-label="Логотип SyperGym">
               <svg width="88" height="32" focusable="false" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#logotype"></use>
+                <use xlink:href="img/sprite/sprite.svg#logotype"></use>
               </svg>
             </a>
           </div>
@@ -221,21 +308,21 @@
               <li class="socials__item">
                 <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте">
                   <svg class="socials__link-icon" width="12" height="7">
-                    <use xlink:href="img/sprite.svg#vk"></use>
+                    <use xlink:href="img/sprite/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link socials__link--ok" href="#" aria-label="Одноклассники">
                   <svg class="socials__link-icon" width="9" height="16">
-                    <use xlink:href="img/sprite.svg#ok"></use>
+                    <use xlink:href="img/sprite/sprite.svg#ok"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link socials__link--reddit" href="#" aria-label="Reddit">
                   <svg class="socials__link-icon" width="14" height="14">
-                    <use xlink:href="img/sprite.svg#reddit"></use>
+                    <use xlink:href="img/sprite/sprite.svg#reddit"></use>
                   </svg>
                 </a>
               </li>
@@ -253,7 +340,7 @@
           <p class="modal__description">Обычная модалка</p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+              <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
             </svg>
           </button>
         </div>
@@ -270,7 +357,7 @@
           </p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+              <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
             </svg>
           </button>
         </div>

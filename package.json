@@ -59,6 +59,7 @@
     "sass": "1.53.0",
     "stylelint": "^14.16.1",
     "stylelint-config-htmlacademy": "1.1.4",
+    "swiper": "^10.0.4",
     "vinyl-buffer": "1.0.1",
     "vinyl-source-stream": "2.0.0"
   },

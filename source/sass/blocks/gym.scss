@@ -19,8 +19,6 @@
   grid-template-columns: auto 1fr;
 
   @include vp-1200 {
-    align-items: center;
-
     grid-template-columns: 1fr;
     row-gap: 50px;
   }
