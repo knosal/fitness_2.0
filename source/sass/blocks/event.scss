@@ -1,11 +1,11 @@
 .event {
   min-height: 500px;
 
-  @include vp-1200 {
+  @include vp-1199 {
     min-height: 292px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     min-height: 584px;
   }
 }
@@ -17,11 +17,11 @@
   width: 100%;
   margin-bottom: 107px;
 
-  @include vp-1200 {
+  @include vp-1199 {
     margin-bottom: 100px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     flex-direction: column;
     max-width: 500px;
     margin-bottom: 66px;
@@ -29,181 +29,202 @@
 }
 
 .event__current {
-  min-width: 450px;
   width: 500px;
+  min-width: 450px;
   min-height: 500px;
   padding: 85px 77px;
-  background-color: $color-red;
+
   color: $color-default-white;
 
-  @include vp-1200 {
-    min-height: 292px;
+  background-color: $color-red;
+
+  @include vp-1199 {
     width: 292px;
     min-width: auto;
+    min-height: 292px;
     padding: 51px 45px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     width: 100%;
     padding: 50px 44px;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 33px;
+    margin-bottom: 55px;
+
+    font-size: 18px;
+
+    grid-column: 1 / span 3;
+    grid-row: 2;
+
+    @include vp-1199 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      font-size: 12px;
+    }
+
+    @include vp-767 {
+      margin-left: 3px;
+    }
   }
 }
 
 .event__inner {
   display: grid;
+
+  font-weight: 400;
+  line-height: 1.5;
+  column-gap: 50px;
+
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
-  column-gap: 50px;
-  font-weight: 400;
-  line-height: 150%;
 
-  @include vp-1200 {
+  @include vp-1199 {
     column-gap: 29px;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 82px;
+    line-height: 96%;
+    font-family: $ff-alumni;
+    text-transform: uppercase;
+    letter-spacing: 2.46px;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include vp-1199 {
+      padding-left: 7px;
+
+      font-size: 48px;
+      line-height: 96%;
+      letter-spacing: 1.44px;
+    }
+
+    @include vp-767 {
+      padding-left: 8px;
+    }
   }
 }
 
-.event__name {
-  font-size: 82px;
-  font-weight: 600;
-  line-height: 96%;
-  font-family: $ff-alumni;
-  letter-spacing: 2.46px;
-  text-transform: uppercase;
-  margin: 0;
+.event__day {
+  width: 92px;
+  margin-top: -6px;
 
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-
-
-  @include vp-1200 {
-    font-size: 48px;
-    line-height: 96%;
-    letter-spacing: 1.44px;
-    padding-left: 7px;
+  @include vp-1199 {
+    max-width: 63px;
   }
 
-  @include vp-768 {
-    padding-left: 8px;
+  p {
+    position: relative;
+
+    max-width: 92px;
+    margin: 0;
+    margin-bottom: 5px;
+
+    text-align: start;
+
+    @include vp-1199 {
+      margin: 0;
+
+      font-size: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 94%;
+      height: 1px;
+
+      background-color: $color-default-white;
+
+      @include vp-1199 {
+        bottom: 2px;
+
+        width: 89%;
+      }
+    }
+  }
+
+  time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+
+    font-weight: 700;
+    font-size: 40px;
+    line-height: initial;
+
+    gap: 3px;
+
+    @include vp-1199 {
+      margin-bottom: 0;
+
+      font-size: 24px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 50px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: initial;
+
+    @include vp-1199 {
+      font-size: 10px;
+    }
   }
 }
 
 .event__date {
-  margin-top: -6px;
-  width: 92px;
-
-  @include vp-1200 {
-    max-width: 63px;
-  }
-}
-
-.event__title {
-  text-align: start;
-  max-width: 92px;
-  margin: 0;
-  margin-bottom: 5px;
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 94%;
-    height: 1px;
-    background-color: $color-default-white;
-    left: 0;
-    bottom: 0;
-
-    @include vp-1200 {
-      bottom: 2px;
-      width: 89%;
-    }
-  }
-
-  &--short::after {
+  p::after {
     width: 62px;
 
-    @include vp-1200 {
+    @include vp-1199 {
       width: 41px;
     }
-  }
-
-  @include vp-1200 {
-    font-size: 12px;
-    margin: 0;
-  }
-}
-
-.event__value {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-
-  margin-bottom: 9px;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: initial;
-
-  @include vp-1200 {
-    font-size: 24px;
-    margin-bottom: 0;
-  }
-}
-
-.event__month {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 14px;
-  width: 50px;
-  line-height: initial;
-
-  @include vp-1200 {
-    font-size: 10px;
-  }
-}
-
-.event__description {
-  margin: 0;
-  margin-top: 33px;
-  margin-bottom: 55px;
-
-  grid-column: 1 / span 3;
-  grid-row: 2;
-
-  font-size: 18px;
-
-  @include vp-1200 {
-    font-size: 12px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-
-  @include vp-768 {
-    margin-left: 3px;
   }
 }
 
 .event__buy {
-  grid-column: 1 / span 3;
-  grid-row: 3;
   width: 100%;
 
-  @include vp-1200 {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+
+  @include vp-1199 {
     width: 97%;
-    outline: 2px solid $color-default-white;
     padding: 12px 0;
+
     font-size: 10px;
     line-height: 12px;
+
+    outline: 2px solid $color-default-white;
   }
 }
 
 .event__promo {
-  background-color: $color-resolution-blue;
   margin: 0;
 
-  @include vp-1200 {
+  background-color: $color-resolution-blue;
+
+  @include vp-1199 {
     max-width: 386px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     max-width: 100%;
     min-height: auto;
 

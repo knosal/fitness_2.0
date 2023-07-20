@@ -1,64 +1,68 @@
 .header {
-  @include vp-1200 {
+  @include vp-1199 {
     margin-bottom: 25px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     margin-bottom: 23px;
   }
+}
 
-  &__wrapper {
-    display: flex;
-    gap: 10px 30px;
-    justify-content: space-between;
-    padding-top: 30px;
-    align-items: center;
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
 
-    @include vp-1200 {
-      padding-top: 37px;
-    }
+  gap: 10px 30px;
 
-    @include vp-768 {
-      padding-top: 15px;
-    }
+  @include vp-1199 {
+    padding-top: 37px;
   }
 
-  &__logo {
-    margin-right: 30px;
+  @include vp-767 {
+    padding-top: 15px;
+  }
+}
+
+.header__logo {
+  margin-right: 30px;
+}
+
+.header__user {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+
+  font-family: $ff-alumni;
+
+  gap: 20px;
+}
+
+.header__phone {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: $color-default-white;
+  letter-spacing: 0.7px;
+
+  @include hover-focus {
+    opacity: 0.8;
   }
 
-  &__user {
-    align-self: flex-start;
-    position: relative;
-    z-index: 5;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    font-family: $ff-alumni;
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
 
-    &-link {
-      color: $color-default-white;
-      font-weight: 600;
-      font-size: 26px;
-      line-height: 31px;
-      letter-spacing: 0.7px;
-
-      @include hover-focus {
-        opacity: 0.8;
-      }
-
-      @include vp-1200 {
-        font-size: 24px;
-        line-height: 28px;
-        font-weight: 700;
-      }
-
-      @include vp-768 {
-        letter-spacing: 0.4px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-      }
-    }
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
   }
 }

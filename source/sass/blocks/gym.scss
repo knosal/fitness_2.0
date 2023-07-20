@@ -1,11 +1,11 @@
 .gym {
   min-height: 636px;
 
-  @include vp-1200 {
+  @include vp-1199 {
     min-height: 754px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     min-height: 860px;
   }
 }
@@ -18,16 +18,16 @@
 
   grid-template-columns: auto 1fr;
 
-  @include vp-1200 {
+  @include vp-1199 {
     grid-template-columns: 1fr;
     row-gap: 50px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     row-gap: 40px;
   }
 
-  @include vp-320 {
+  @include vp-319 {
     padding: 0;
   }
 }
@@ -38,85 +38,86 @@
   margin-top: 49px;
   margin-left: 58px;
 
-  @include vp-1200 {
+  @include vp-1199 {
     align-items: center;
     margin: 0;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     align-items: flex-start;
   }
 
-  @include vp-320 {
+  @include vp-319 {
     padding: 0 15px;
   }
-}
 
-.title-h2 {
-  @include title-h2;
+  h2 {
+    @include title-h2;
 
-  @include vp-1200 {
-    font-size: 42px;
-    letter-spacing: 1.26px;
-  }
+    @include vp-1199 {
+      font-size: 42px;
+      letter-spacing: 1.26px;
+    }
 
-  @include vp-768 {
-    font-size: 32px;
-    letter-spacing: 0.96px;
-  }
-}
-
-.gym__text {
-  max-width: 400px;
-  margin: 0;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  font-family: $ff-roboto;
-  color: $color-sapphire;
-
-  @include vp-1200 {
-    display: flex;
-    align-items: center;
-    max-width: 502px;
-
-    font-weight: 300;
-    font-size: 16px;
-    text-align: center;
-
-    &--supplementary {
-      display: none;
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
     }
   }
 
-  @include vp-768 {
-    text-align: start;
-  }
+  p {
+    max-width: 410px;
+    margin: 0;
 
-  &:first-of-type {
-    margin-top: 25px;
-    margin-bottom: 55px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: $ff-roboto;
+    color: $color-sapphire;
 
-    @include vp-1200 {
-      margin-top: 5px;
-      margin-bottom: 50px;
+    @include vp-1199 {
+      display: flex;
+      align-items: center;
+      max-width: 502px;
 
-      font-weight: 400;
+      font-weight: 300;
+      font-size: 16px;
+      text-align: center;
+
+      &:last-of-type {
+        display: none;
+      }
     }
 
-    @include vp-768 {
-      margin-top: 20px;
-      margin-bottom: 40px;
+    @include vp-767 {
+      text-align: start;
+    }
+
+    &:first-of-type {
+      margin-top: 25px;
+      margin-bottom: 55px;
+
+      @include vp-1199 {
+        margin-top: 5px;
+        margin-bottom: 50px;
+
+        font-weight: 400;
+      }
+
+      @include vp-767 {
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
     }
   }
+
 }
 
 .gym__appearance {
   position: relative;
 
-  @include vp-1200 {
+  @include vp-1199 {
     margin-bottom: 183px;
   }
 

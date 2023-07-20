@@ -2,66 +2,65 @@
   display: flex;
   justify-content: flex-end;
   min-height: 40px;
+}
 
-  &__list {
-    display: flex;
+
+.socials__list {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  min-width: 100px;
+  max-width: 100px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+  line-height: 0;
+
+  gap: 11px;
+
+  @include vp-767 {
+    flex-wrap: nowrap;
+    margin-top: 26px;
+  }
+
+  @include vp-319 {
     flex-wrap: wrap;
-    gap: 11px;
-    min-width: 100px;
-    max-width: 100px;
-    line-height: 0;
+  }
+}
 
-    @include ul-reset;
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
 
-    @include vp-768 {
-      margin-top: 26px;
-      flex-wrap: nowrap;
-    }
+  background-color: $color-default-white;
+  border-radius: 50%;
 
-    @include vp-320 {
-      flex-wrap: wrap;
+  @include hover-focus {
+    background-color: $color-egyptian-blue;
+
+    svg {
+      fill: $color-default-white;
     }
   }
 
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include active {
+    background-color: $color-sapphire;
 
-    width: 25px;
-    height: 25px;
+    svg {
+      fill: $color-default-white;
+    }
+  }
 
+  &:disabled {
     background-color: $color-default-white;
-    border-radius: 50%;
+    opacity: 0.3;
 
-    &-icon {
-      fill: inherit;
-    }
-
-    @include hover-focus {
-      background-color: $color-egyptian-blue;
-
-      .socials__link-icon {
-        fill: $color-default-white;
-      }
-    }
-
-    @include active {
-      background-color: $color-sapphire;
-
-      .socials__link-icon {
-        fill: $color-default-white;
-      }
-    }
-
-    &:disabled {
-      opacity: 0.3;
-
-      background-color: $color-default-white;
-
-      .socials__link-icon {
-        fill: $color-default-black;
-      }
+    svg {
+      fill: $color-default-black;
     }
   }
 }

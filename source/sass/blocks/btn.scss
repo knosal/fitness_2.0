@@ -1,25 +1,27 @@
 .btn {
   display: inline-flex;
+  flex-shrink: 0;
   justify-content: center;
   padding: 24px 42px;
-  font-size: 12px;
+
   font-weight: 700;
+  font-size: 12px;
   line-height: 14px;
   font-family: $ff-roboto;
-  letter-spacing: 0.6px;
   color: $color-default-white;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
+
   background-color: transparent;
   cursor: pointer;
-  flex-shrink: 0;
 
   transition: opacity $trans-default;
 
   &:disabled {
+    background-color: none;
     opacity: 0.5;
 
     pointer-events: none;
-    background-color: none;
   }
 
   &--slider {
@@ -36,12 +38,14 @@
   &--empty {
     padding: 21px 22px 18px;
 
-    outline: 4px solid $color-default-white;
     color: $color-default-white;
 
+    outline: 4px solid $color-default-white;
+
     @include hover-focus {
-      background-color: $color-default-white;
       color: $color-egyptian-blue;
+
+      background-color: $color-default-white;
     }
 
     @include focus {
@@ -49,22 +53,25 @@
     }
 
     @include active {
-      background-color: $color-default-white;
       color: $color-sapphire;
+
+      background-color: $color-default-white;
     }
   }
 
   &--background {
     width: 206px;
 
-    outline: 2px solid $color-sapphire;
     color: $color-sapphire;
 
+    outline: 2px solid $color-sapphire;
+
     @include hover-focus {
-      background: $color-button-gradient;
       color: $color-default-white;
-      outline: none;
+
+      background: $color-button-gradient;
       border: none;
+      outline: none;
     }
 
     @include focus {

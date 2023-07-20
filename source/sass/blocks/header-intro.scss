@@ -1,17 +1,20 @@
 .header-intro {
   min-height: 657px;
-  background: $color-main-gradient;
   margin-bottom: 120px;
 
-  @include vp-1200 {
+  background: $color-main-gradient;
+
+  @include vp-1199 {
     min-height: 554px;
-    background: $color-main-gradient-tablet;
     margin-bottom: 100px;
+
+    background: $color-main-gradient-tablet;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     min-height: 491px;
-    background: $color-main-gradient-mobile;
     margin-bottom: 64px;
+
+    background: $color-main-gradient-mobile;
   }
 }

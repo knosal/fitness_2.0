@@ -6,99 +6,114 @@
 
   background-color: $color-ghost-white;
 
-  @include vp-1200 {
+  @include vp-1199 {
     padding-top: 92px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     padding-top: 63px;
   }
 
   h2 {
-    @include title-h2;
     margin-bottom: 55px;
 
-    @include vp-1200 {
+    @include title-h2;
+
+    @include vp-1199 {
       font-size: 42px;
       line-height: 50px;
     }
 
-    @include vp-768 {
+    @include vp-767 {
+      margin-bottom: 30px;
+
       font-size: 32px;
       line-height: 38px;
-      margin-bottom: 30px;
     }
   }
 }
 
 .advantages__wrapper {
   max-width: 1136px;
-  padding: 0 45px 83px;
   margin-bottom: 148px;
+  padding: 0 45px 83px;
 
-  @include vp-1200 {
-    max-width: 768px;
-    padding: 0 45px 71px;
+  @include vp-1199 {
+    max-width: 767px;
     margin-bottom: 86px;
+    padding: 0 45px 71px;
   }
 
-  @include vp-768 {
+  @include vp-767 {
     max-width: 100%;
-    padding: 0 0 41px;
     margin-bottom: 64px;
+    padding: 0 0 41px;
   }
 }
 
 .advantages__list {
-  @include ul-reset;
   display: grid;
-  grid-template-columns: 1fr 240px 1fr;
-  grid-auto-flow: dense;
-  gap: 130px 60px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
 
-  @include vp-1200 {
-    grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+
+  gap: 130px 60px;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 240px 1fr;
+
+  @include vp-1199 {
     gap: 0 31px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @include vp-768 {
-    grid-template-columns: 1fr;
+  @include vp-767 {
     gap: 0;
+    grid-template-columns: 1fr;
     justify-items: center;
   }
 }
 
 .advantages__item {
-  grid-column: 3;
   display: flex;
-  column-gap: 30px;
-  overflow-wrap: break-word;
 
-  @include vp-1200 {
-    grid-column: 2;
+  column-gap: 30px;
+
+  grid-column: 3;
+
+  @include vp-1199 {
     margin-bottom: 20px;
+
+    grid-column: 2;
   }
 
-  @include vp-768 {
-    grid-column: 1/-1;
-    max-width: 460px;
+  @include vp-767 {
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 460px;
     margin-bottom: 0;
     padding: 0 46px 20px;
+
     text-align: center;
+
+    grid-column: 1/-1;
   }
+
+  overflow-wrap: break-word;
 
   &--left {
     padding-left: 23px;
+
     grid-column: 1;
 
-    @include vp-1200 {
+    @include vp-1199 {
       padding-left: 0;
+
       grid-column: 1;
     }
 
-    @include vp-768 {
+    @include vp-767 {
       padding: 0 46px 20px;
     }
   }
@@ -110,27 +125,31 @@
 
 .advantages__item-number {
   p {
-    line-height: 150%;
-    @include gradient-text;
+    margin-bottom: -24px;
+
     font-weight: 700;
     font-size: 71px;
-    margin-bottom: -24px;
-    line-height: 150%;
+    line-height: 1.5;
 
-    @include vp-1200 {
-      font-size: 58px;
+    @include gradient-text;
+
+    @include vp-1199 {
       margin-bottom: -20px;
+
+      font-size: 58px;
     }
 
-    @include vp-768 {
+    @include vp-767 {
       margin-bottom: -22px;
     }
   }
 
   span {
     display: inline-block;
-    vertical-align: baseline;
+
     font-size: 14px;
+    vertical-align: baseline;
+    color: $color-egyptian-blue;
   }
 }
 
@@ -138,17 +157,19 @@
   p {
     padding-top: 20px;
     padding-bottom: 6px;
+
     font-weight: 700;
     font-size: 22px;
-    line-height: 150%;
+    line-height: 1.5;
 
-    @include vp-1200 {
+    @include vp-1199 {
       padding-top: 15px;
       padding-bottom: 1px;
+
       font-size: 20px;
     }
 
-    @include vp-768 {
+    @include vp-767 {
       padding-top: 5px;
     }
   }
@@ -160,24 +181,54 @@
 
 .advantages__promo {
   position: relative;
-  grid-column: 2;
-  grid-row: 2 span;
+
   max-width: 240px;
   margin: 29px auto auto;
   padding: 35px 34px 59px;
-  background-color: $color-resolution-blue;
+
   color: $color-default-white;
+
+  background-color: $color-resolution-blue;
+
+  grid-column: 2;
+  grid-row: 2 span;
+
+  @include vp-1199 {
+    max-width: 442px;
+    margin: 22px auto 27px;
+    padding: 16px 135px 38px;
+
+    grid-column: 1/-1;
+    grid-row: 2;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 100%;
+    min-height: 239px;
+    margin: 20px auto 27px;
+    padding: 22px 74px 20px;
+
+    grid-row: 3;
+  }
 
   &::before,
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
+    top: 51%;
+
     width: 340px;
     height: 2px;
+
     background-color: $color-crimson;
-    opacity: 0.2;
-    top: 51%;
     transform: translate(-50%, -50%);
+    opacity: 0.2;
   }
 
   &::before {
@@ -188,30 +239,9 @@
     left: 471px;
   }
 
-  @include vp-1200 {
-    max-width: 442px;
-    margin: 22px auto 27px;
-    padding: 16px 135px 38px;
-    grid-column: 1/-1;
-    grid-row: 2;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-  }
-
-  @include vp-768 {
-    margin: 20px auto 27px;
-    grid-row: 3;
-    padding: 22px 74px 20px;
-    width: 100%;
-    max-width: 100%;
-    min-height: 239px;
-  }
-
   p {
     margin: 0;
+
     text-align: center;
   }
 }
@@ -221,29 +251,32 @@
   text-align: center;
 
   p {
-    font-size: 74px;
-    margin-bottom: -17px;
     margin-right: 3px;
-    line-height: 150%;
+    margin-bottom: -17px;
 
-    @include vp-1200 {
-      margin-bottom: -21px;
+    font-size: 74px;
+    line-height: 1.5;
+
+    @include vp-1199 {
       margin-right: 6px;
+      margin-bottom: -21px;
     }
   }
 
   span {
     display: inline-block;
-    vertical-align: baseline;
-    font-size: 26px;
     margin-bottom: 31px;
 
-    @include vp-1200 {
-      font-size: 22px;
+    font-size: 26px;
+    vertical-align: baseline;
+
+    @include vp-1199 {
       margin-bottom: 14px;
+
+      font-size: 22px;
     }
 
-    @include vp-768 {
+    @include vp-767 {
       margin: -7px 0 7px;
     }
   }

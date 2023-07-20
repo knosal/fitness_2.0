@@ -1,18 +1,20 @@
 .subscriptions__list {
   display: grid;
+  flex-shrink: 0;
   margin: 0 0 20px;
+  padding: 0;
+
+  list-style-type: none;
 
   gap: 42px;
   grid-template-columns: repeat(3, auto);
 
-  @include ul-reset;
-
-  @include vp-1200 {
+  @include vp-1199 {
     gap: 39px;
     grid-template-columns: minmax(290px, 442px);
   }
 
-  @include vp-768 {
+  @include vp-767 {
     gap: 35px;
   }
 }
@@ -32,6 +34,43 @@
   background-color: $color-default-white;
   border: 7px solid $color-transparent;
 
+  @include vp-1199 {
+    min-width: 290px;
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    min-height: 384px;
+    padding: 41px 33px;
+  }
+
+  @include hover-focus {
+    border-image: $color-border-gradient;
+    border-image-slice: 1;
+    outline: none;
+
+    @include vp-1199 {
+      min-width: 290px;
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      min-height: 384px;
+      padding: 41px 33px;
+    }
+
+    .subscriptions__buy {
+      padding: 26px 44px;
+
+      color: $color-default-white;
+
+      background: $color-button-gradient;
+      border: none;
+      outline: none;
+    }
+  }
+  overflow-wrap: break-word;
+
   &--current {
     border-image: $color-border-gradient;
     border-image-slice: 1;
@@ -48,107 +87,76 @@
     }
   }
 
-  @include vp-1200 {
-    min-width: 290px;
-    max-width: 100%;
-  }
+  h3 {
+    @include title-h3;
 
-  @include vp-768 {
-    min-height: 384px;
-    padding: 41px 33px;
-  }
+    @include vp-767 {
+      margin-bottom: 6px;
 
-  @include hover-focus {
-    border-image: $color-border-gradient;
-    border-image-slice: 1;
-    outline: none;
-
-    @include vp-1200 {
-      min-width: 290px;
-      max-width: 100%;
+      font-size: 22px;
     }
 
-    @include vp-768 {
-      min-height: 384px;
-      padding: 41px 33px;
-    }
-
-    .subscriptions__buy {
-      padding: 26px 44px;
-
-      color: $color-default-white;
-
-      background: $color-button-gradient;
-      border: none;
-      outline: none;
+    @include vp-319 {
+      font-size: 16px;
     }
   }
-  overflow-wrap: break-word;
-}
 
-.subscriptions__title {
-  @include title-h3;
-
-  @include vp-768 {
-    margin-bottom: 6px;
-
-    font-size: 22px;
-  }
-
-  @include vp-320 {
+  p {
+    font-weight: 400;
     font-size: 16px;
+    line-height: 24px;
+    font-family: $ff-roboto;
+    color: $color-sapphire;
+
+    @include vp-1199 {
+      margin-bottom: 59px;
+    }
   }
 }
 
-.subscriptions__description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: $ff-roboto;
-  color: $color-sapphire;
-
-  @include vp-1200 {
-    margin-bottom: 59px;
-  }
-}
-
-.subscriptions__price-max {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  z-index: 1;
-
+.subscriptions__price {
   font-weight: 700;
-  font-size: 100px;
-  line-height: 150px;
   font-family: $ff-roboto;
-  color: $color-grey;
 
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
+  &--max {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 1;
 
-  user-select: none;
 
-  @include vp-1200 {
-    top: 48%;
+    font-size: 100px;
+    line-height: 150px;
+    color: $color-grey;
+
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+
+    user-select: none;
+
+    @include vp-1199 {
+      top: 48%;
+    }
+  }
+
+  &--min {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+    width: 170px;
+
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+
+    vertical-align: middle;
+    color: $color-egyptian-blue;
+
+    @include vp-1199 {
+      margin-bottom: 50px;
+    }
   }
 }
 
-.subscriptions__price-min {
-  position: relative;
-  z-index: 2;
 
-  display: inline-block;
-  width: 170px;
-
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-  font-family: $ff-roboto;
-  vertical-align: middle;
-  color: $color-egyptian-blue;
-
-  @include vp-1200 {
-    margin-bottom: 50px;
-  }
-}

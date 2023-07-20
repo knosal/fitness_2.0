@@ -1,38 +1,8 @@
-// RESET
-@mixin button-reset {
-  background-color: transparent;
-  border: none;
-  outline: 0;
-  cursor: pointer;
-}
-
-@mixin ul-reset {
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-}
-
-@mixin li-reset-last-el {
-  &:last-child {
-    margin: 0;
-  }
-}
-
-@mixin fieldset-reset {
-  margin: 0;
-  padding: 0;
-
-  border: 0;
-
-  appearance: none;
-}
-
 @mixin gradient-text {
-  -webkit-text-fill-color: transparent;
   background-image: linear-gradient(127.61deg, $color-crimson 0%, $color-cobalt 87.33%);
   background-clip: text;
+
+  -webkit-text-fill-color: transparent;
 }
 
 // TITLE
@@ -47,7 +17,7 @@
   letter-spacing: $l-spacing;
 }
 
-@mixin title-h3($f-size: 22px, $l-spacing: 150%) {
+@mixin title-h3($f-size: 22px, $l-spacing: 1.5) {
   margin: 0;
 
   font-weight: 700;
@@ -110,92 +80,24 @@
 // VIEWPORTS
 // Desktop first
 
-@mixin vp-1920 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1440 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1280 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1200 {
+@mixin vp-1199 {
   @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-1024 {
-  @media (max-width: ($vp-1024 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-768 {
+@mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-375 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-320 {
+@mixin vp-319 {
   @media (max-width: ($vp-320 - 1px)) {
     @content;
   }
 }
 
-/* Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
-*/
 // ---------------------------------
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
