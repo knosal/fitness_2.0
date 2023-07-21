@@ -1,0 +1,83 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}
+
+.tabs__control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 260px;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include vp-1199 {
+    flex-direction: row;
+    max-width: none;
+  }
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+}
+
+.tabs__button {
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: 1px solid $color-border-grey;
+  max-width: 260px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 107px;
+
+  &--active {
+    color: $color-default-white;
+    background: $color-button-gradient;
+  }
+
+  @include vp-1199 {
+    width: 100%;
+    min-width: 162px;
+    padding: 18px 58px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    max-width: 141px;
+    min-width: auto;
+    padding: 0;
+  }
+}
+
+.tabs__inner {
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  /*position: absolute;
+
+  visibility: hidden;
+  opacity: 0;*/
+}
+
+/*
+.centre:checked ~ .tabs__item[title="centre"],
+.ticket:checked ~ .tabs__item[title="ticket"],
+.service:checked ~ .tabs__item[title="service"],
+.rules:checked ~ .tabs__item[title="rules"]  {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+}*/
