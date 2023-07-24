@@ -66,12 +66,12 @@
   }
 
   p {
-    max-width: 410px;
+    max-width: 355px;
     margin: 0;
 
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     font-family: $ff-roboto;
     color: $color-sapphire;
@@ -113,11 +113,22 @@
   }
 }
 
-.gym__appearance {
+.gym__media {
   position: relative;
+}
+
+.gym__picture {
+  max-height: 401px;
+  margin: 0;
+
+  background-color: $color-ghost-white;
 
   @include vp-1199 {
     margin-bottom: 183px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 39px;
   }
 
   img {
@@ -125,5 +136,18 @@
     max-height: 401px;
 
     object-fit: cover;
+  }
+}
+
+.gym__video {
+  position: absolute;
+  left: 115px;
+  width: 364px;
+  height: 228px;
+  transform: translate(-50%, -50%);
+
+  @include vp-1199 {
+    bottom: 20px;
+    left: 50%;
   }
 }
