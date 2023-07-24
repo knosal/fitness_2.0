@@ -9,7 +9,7 @@ const swiperCards = new Swiper('.coach__slider', {
       slidesPerView: 1,
       spaceBetween: 0,
     },
-    767: {
+    768: {
       grabCursor: true,
       slidesPerView: 2,
       spaceBetween: 30,
@@ -27,4 +27,15 @@ const swiperCards = new Swiper('.coach__slider', {
 
 });
 
-export default {swiperCards};
+const swiperReviews = new Swiper('.reviews__slider', {
+  modules: [Navigation],
+  slidesPerView: 1,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.reviews__button-next',
+    prevEl: '.reviews__button-prev',
+  },
+
+});
+
+export default {swiperCards, swiperReviews};
