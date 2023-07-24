@@ -1,4 +1,4 @@
-import Swiper, {Navigation} from 'swiper';
+import Swiper, {Navigation} from '../vendor/swiper';
 
 const swiperCards = new Swiper('.coach__slider', {
   modules: [Navigation],
