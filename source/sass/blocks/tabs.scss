@@ -43,11 +43,6 @@
   justify-content: center;
   padding: 18px 107px;
 
-  &--active {
-    color: $color-default-white;
-    background: $color-button-gradient;
-  }
-
   @include vp-1199 {
     width: 100%;
     min-width: 162px;
@@ -62,22 +57,24 @@
   }
 }
 
-.tabs__inner {
+[data-tabs].is-active {
+  color: $color-default-white;
+  background: $color-button-gradient;
+}
+
+.tabs__list {
+  min-height: 450px;
+  width: 100%;
+
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.15px;
-  /*position: absolute;
-
-  visibility: hidden;
-  opacity: 0;*/
 }
 
-/*
-.centre:checked ~ .tabs__item[title="centre"],
-.ticket:checked ~ .tabs__item[title="ticket"],
-.service:checked ~ .tabs__item[title="service"],
-.rules:checked ~ .tabs__item[title="rules"]  {
-  position: relative;
-  visibility: visible;
-  opacity: 1;
-}*/
+.tabs__item {
+  display: none;
+}
+
+.tabs__item.is-active {
+  display: block;
+}
