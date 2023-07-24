@@ -71,13 +71,13 @@
   }
   overflow-wrap: break-word;
 
-  &--current {
+  &.is-active {
     border-image: $color-border-gradient;
     border-image-slice: 1;
     outline: none;
 
     .subscriptions__buy {
-      padding: 26px 44px;
+      padding: 25px 43px;
 
       color: $color-default-white;
 
@@ -156,5 +156,11 @@
     @include vp-1199 {
       margin-bottom: 50px;
     }
+  }
+
+  svg {
+    position: absolute;
+    bottom: 0;
+    transform: translate(50%, -50%);
   }
 }
