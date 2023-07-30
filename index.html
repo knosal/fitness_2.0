@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Фитнес центр Supergym" />
     <title>fitness_2.0</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous" />
-    <link href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous" />
-    <link href="fonts/AlumniSans-Bold.woff2" as="font" crossorigin="anonymous" />
-    <link href="fonts/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous" />
-
+    <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/AlumniSans-SemiBold-600.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/AlumniSans-Bold-700.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/AlumniSans-ExtraBold-800.woff2" as="font" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
-
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
+
   <body>
     <div class="wrapper">
       <div class="header-intro">
@@ -29,12 +27,12 @@
             <div class="header__logo logo">
               <a class="logo__link" href="#" aria-label="Логотип SyperGym">
                 <svg width="122" height="44" focusable="false" aria-hidden="true">
-                  <use xlink:href="img/sprite/sprite.svg#logotype"></use>
+                  <use xlink:href="img/sprite.svg#logotype"></use>
                 </svg>
               </a>
             </div>
             <div class="header__user">
-              <a class="header__phone" href="tel:8-800-555-55-55">8-800-555-55-55</a>
+              <a class="header__phone" href="tel:7+8005555555">8-800-555-55-55</a>
             </div>
           </div>
         </header>
@@ -68,28 +66,28 @@
           <div class="gym__wrapper container">
             <div class="gym__about">
               <h2>Тренажерный зал</h2>
-              <p>Просторный зал площадью 900 кв/м</p>
-              <p>Supergym – самый большой фитнес центр за&nbsp;Уралом и идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем&nbsp;необходимым современным оборудованием для всех&nbsp;спортсменов.</p>
-              <p>В зале расположены отдельная зона для Crossfit&nbsp;и кардио-зона с 40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов&nbsp;для различных видов групповых занятий.</p>
+              <p>Просторный зал площадью 900&nbsp;кв/м</p>
+              <div class="gym__text">
+                <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+                <p>В&nbsp;зале расположены отдельная зона для Crossfit&nbsp;и кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+              </div>
             </div>
-            <div class="gym__media">
-              <div class="gym__picture">
+            <p class="gym__picture">
+              <picture>
+                <source type="image/webp" srcset="img/gym.webp 1x, img/gym@2x.webp 2x" width="500" height="556" />
+                <img src="img/gym.jpg" srcset="img/gym@2x.jpg 2x" width="660" height="401" loading="lazy" alt="Фото тренера" />
+              </picture>
+            </p>
+            <div class="video" data-video>
+              <a class="video__link" data-video-link href="https://youtu.be/9TZXsZItgdw">
                 <picture>
-                  <source type="image/webp" srcset="img/gym.webp 1x, img/gym@2x.webp 2x" width="500" height="556" />
-                  <img src="img/gym.jpg" srcset="img/gym@2x.jpg 2x" width="660" height="401" loading="lazy" alt="Фото тренера" />
+                  <source type="image/webp" srcset="img/gym-video.webp 1x, img/gym-video@2x.webp 2x" />
+                  <img class="video__media" srcset="img/gym-video@2x.jpg 2x" src="https://i.ytimg.com/vi/9TZXsZItgdw/maxresdefault.jpg" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
                 </picture>
-              </div>
-              <div class="gym__video video" data-video>
-                <a class="video__link" data-video-link href="https://youtu.be/9TZXsZItgdw">
-                  <picture>
-                    <source type="image/webp" srcset="img/gym-video.webp 1x, img/gym-video@2x.webp 2x" />
-                    <img class="video__media" srcset="img/gym-video@2x.jpg 2x" src="https://i.ytimg.com/vi/9TZXsZItgdw/maxresdefault.jpg" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
-                  </picture>
-                </a>
-                <button class="video__button" type="button" data-video-button aria-label="Запустить видео">
-                  <img src="img/sprite/video-button.svg" width="100" height="100" />
-                </button>
-              </div>
+              </a>
+              <button class="video__button" type="button" data-video-button aria-label="Запустить видео">
+                <img src="img/sprite/video-button.svg" width="100" height="100" alt="фотография тренажерного зала" />
+              </button>
             </div>
           </div>
         </section>
@@ -98,9 +96,9 @@
           <div class="memberships__wrapper container">
             <h2>Абонементы</h2>
             <div class="memberships__controls">
-              <button class="memberships__button is-active" type="button" data-month="1" aria-label="1 месяц">1 месяц</button>
-              <button class="memberships__button" type="button" data-month="2" aria-label="6 месяцев">6 месяцев</button>
-              <button class="memberships__button" type="button" data-month="3" aria-label="12 месяцев">12 месяцев</button>
+              <button class="memberships__button is-active" type="button" data-month="1" aria-label="1 месяц">1&nbsp;месяц</button>
+              <button class="memberships__button" type="button" data-month="2" aria-label="6 месяцев">6&nbsp;месяцев</button>
+              <button class="memberships__button" type="button" data-month="3" aria-label="12 месяцев">12&nbsp;месяцев</button>
             </div>
             <div class="memberships__content subscriptions">
               <ul class="subscriptions__list" data-list="1">
@@ -111,19 +109,19 @@
                   <span class="subscriptions__price subscriptions__price--min">
                     5000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__item subscriptions__item--current">
+                <li class="subscriptions__item is-active">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span class="subscriptions__price subscriptions__price--max">1700</span>
                   <span class="subscriptions__price subscriptions__price--min">
                     1700
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -135,7 +133,7 @@
                   <span class="subscriptions__price subscriptions__price--min">
                     2700
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -149,19 +147,19 @@
                   <span class="subscriptions__price subscriptions__price--min">
                     8000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__item subscriptions__item--current">
+                <li class="subscriptions__item is-active">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span class="subscriptions__price subscriptions__price--max">4000</span>
                   <span class="subscriptions__price subscriptions__price--min">
                     4000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -173,7 +171,7 @@
                   <span class="subscriptions__price subscriptions__price--min">
                     9000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -187,19 +185,19 @@
                   <span class="subscriptions__price subscriptions__price--min">
                     10000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__item subscriptions__item--current">
+                <li class="subscriptions__item is-active">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span class="subscriptions__price subscriptions__price--max">7000</span>
                   <span class="subscriptions__price subscriptions__price--min">
                     7000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -211,7 +209,7 @@
                   <span class="subscriptions__price subscriptions__price--min">
                     12000
                     <svg width="30" height="42" focusable="false" aria-hidden="true">
-                      <use xlink:href="img/sprite/sprite.svg#rubble"></use>
+                      <use xlink:href="img/sprite.svg#rubble"></use>
                     </svg>
                   </span>
                   <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
@@ -239,11 +237,11 @@
                 <div class="event__day">
                   <div class="event__date">
                     <p>Дата</p>
-                    <time>7<span>Марта 2019</span></time>
+                    <time datetime="2019-03-07">7<span>Марта 2019</span></time>
                   </div>
                   <div class="event__time">
                     <p>Время</p>
-                    <time>12:00 </time>
+                    <time datetime="12:00">12:00 </time>
                   </div>
                 </div>
               </div>
@@ -264,8 +262,8 @@
             <button type="button" class="coach__button-prev swiper-button-prev btn btn--slider" aria-label="стрелка назад"></button>
             <h2>Тренеры</h2>
             <div class="swiper coach__slider">
-              <div class="swiper-wrapper coach__slider-inner">
-                <div class="coach__slide swiper-slide">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
                   <div class="coach__inner">
                     <picture>
                       <img srcset="img/coach-anna.webp 1x, img/coach-anna@2x.webp 2x" src="img/coach-anna.jpg" width="260" height="294" alt="Анна Павлова" loading="lazy" />
@@ -276,14 +274,14 @@
                         <p>CrossFit</p>
                         <ul>
                           <li>Certified Level&nbsp;3 Trainer</li>
-                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Победитель чемпионата России по CrossFit</li>
                           <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="coach__slide swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <div class="coach__inner">
                     <picture>
                       <img srcset="img/coach-alexey.webp 1x, img/coach-alexey@2x.webp 2x" src="img/coach-alexey.jpg" width="260" height="294" alt="Алексей Лавров" loading="lazy" />
@@ -300,8 +298,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="coach__slide swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <div class="coach__inner">
                     <picture>
                       <img srcset="img/coach-alex.webp 1x, img/coach-alex@2x.webp 2x" src="img/coach-alex.jpg" width="260" height="294" alt="Александр Пашков" loading="lazy" />
@@ -318,8 +316,8 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="coach__slide swiper-slide">
+                </li>
+                <li class="swiper-slide">
                   <div class="coach__inner">
                     <picture>
                       <img srcset="img/coach-mariya.webp 1x, img/coach-mariya@2x.webp 2x" src="img/coach-mariya.jpg" width="260" height="294" alt="Мария Кетова" loading="lazy" />
@@ -336,8 +334,80 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-anna.webp 1x, img/coach-anna@2x.webp 2x" src="img/coach-anna.jpg" width="260" height="294" alt="Анна Павлова" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Анна Павлова</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Certified Level&nbsp;3 Trainer</li>
+                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-alexey.webp 1x, img/coach-alexey@2x.webp 2x" src="img/coach-alexey.jpg" width="260" height="294" alt="Алексей Лавров" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Алексей Лавров</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Certified Level&nbsp;3 Trainer</li>
+                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-alex.webp 1x, img/coach-alex@2x.webp 2x" src="img/coach-alex.jpg" width="260" height="294" alt="Александр Пашков" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Александр Пашков</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Certified Level&nbsp;3 Trainer</li>
+                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="coach__inner">
+                    <picture>
+                      <img srcset="img/coach-mariya.webp 1x, img/coach-mariya@2x.webp 2x" src="img/coach-mariya.jpg" width="260" height="294" alt="Мария Кетова" loading="lazy" />
+                    </picture>
+                    <div class="coach__description" tabindex="0">
+                      <h3>Мария Кетова</h3>
+                      <div class="coach__info">
+                        <p>CrossFit</p>
+                        <ul>
+                          <li>Certified Level&nbsp;3 Trainer</li>
+                          <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                          <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
             <button type="button" class="coach__button-next swiper-button-next btn btn--slider" aria-label="стрелка вперёд"></button>
           </div>
@@ -441,20 +511,20 @@
             <h2>Вопросы и ответы</h2>
             <div class="tabs">
               <div class="tabs__control">
-                <label class="tabs__button" for="centre" tabindex="0" data-tabs="1"
-                  >Центр
+                <label class="tabs__button" for="centre" tabindex="0" data-tabs="1">
+                  Центр
                   <input class="visually-hidden centre" type="radio" name="topic" id="centre" value="Центр" tabindex="0" />
                 </label>
-                <label class="tabs__button is-active" for="ticket" tabindex="0" data-tabs="2"
-                  >Абонемент
+                <label class="tabs__button is-active" for="ticket" tabindex="0" data-tabs="2">
+                  Абонемент
                   <input class="visually-hidden ticket" type="radio" name="topic" id="ticket" value="Абонемент" tabindex="0" checked />
                 </label>
-                <label class="tabs__button" for="service" tabindex="0" data-tabs="3"
-                  >Услуги
+                <label class="tabs__button" for="service" tabindex="0" data-tabs="3">
+                  Услуги
                   <input class="visually-hidden service" type="radio" name="topic" id="service" value="Услуги" tabindex="0" />
                 </label>
-                <label class="tabs__button" for="rules" tabindex="0" data-tabs="4"
-                  >Правила
+                <label class="tabs__button" for="rules" tabindex="0" data-tabs="4">
+                  Правила
                   <input class="visually-hidden rules" type="radio" name="topic" id="rules" value="Правила" tabindex="0" />
                 </label>
               </div>
@@ -462,85 +532,85 @@
                 <!--#1-->
                 <div class="tabs__item" title="centre" data-content="1">
                   <div class="accordion">
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title" aria-open="false">Центр с тренером входит в абонемент?<span aria-hidden="true"></span></summary>
+                    <div class="accordion__item">
+                      <h3>Центр с тренером входит в абонемент?<span aria-hidden="true"></span></h3>
                       <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title" aria-open="false" aria-default-open="true">Можно ли заморозить абонемент?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Можно ли заморозить абонемент?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title" aria-open="false">Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title" aria-open="false">Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
+                    </div>
                   </div>
                 </div>
                 <!--#2-->
-                <div class="tabs__item" title="ticket" data-content="2">
+                <div class="tabs__item is-active" title="ticket" data-content="2">
                   <div class="accordion">
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Занятия с тренером входят в абонемент?<span aria-hidden="true"></span></summary>
+                    <div class="accordion__item is-open">
+                      <h3>Занятия с тренером входят в абонемент?<span aria-hidden="true"></span></h3>
                       <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Можно ли заморозить абонемент?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Можно ли заморозить абонемент?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
+                    </div>
                   </div>
                 </div>
                 <!--#3-->
                 <div class="tabs__item" title="service" data-content="3">
                   <div class="accordion">
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Услуги с тренером входят в абонемент?<span aria-hidden="true"></span></summary>
+                    <div class="accordion__item">
+                      <h3>Услуги с тренером входят в абонемент?<span aria-hidden="true"></span></h3>
                       <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Можно ли заморозить абонемент?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Можно ли заморозить абонемент?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
+                    </div>
                   </div>
                 </div>
                 <!--//#4-->
                 <div class="tabs__item" title="rules" data-content="4">
                   <div class="accordion">
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Правила с тренером входят в абонемент?<span aria-hidden="true"></span></summary>
+                    <div class="accordion__item">
+                      <h3>Правила с тренером входят в абонемент?<span aria-hidden="true"></span></h3>
                       <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Можно ли заморозить абонемент?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Можно ли заморозить абонемент?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
-                    <details class="accordion__item">
-                      <summary class="accordion__item-title">Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></summary>
+                    </div>
+                    <div class="accordion__item">
+                      <h3>Что такое семейный доступ и доступ для друзей?<span aria-hidden="true"></span></h3>
                       <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</p>
-                    </details>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -574,8 +644,8 @@
                     <div class="reviews__content-inner">
                       <p class="reviews__content-picture">
                         <picture>
-                          <source type="image/webp" srcset="img/avatar.webp 1x, img/avatar@2x.webp 2x" />
-                          <img src="img/avatar.jpg" srcset="img/avatar@2x.jpg" width="80" height="80" alt="Анна Орлова" loading="lazy" />
+                          <source type="image/webp" srcset="img/reviews-avatar.webp 1x, img/reviews-avatar@2x.webp 2x" />
+                          <img src="img/reviews-avatar.jpg" srcset="img/reviews-avatar@2x.jpg" width="80" height="80" alt="Анна Орлова" loading="lazy" />
                         </picture>
                       </p>
                       <p class="reviews__content-name">Анна Орлова</p>
@@ -593,7 +663,7 @@
         <section class="info-group">
           <div class="info-group__form form">
             <form class="form__content">
-              <h3>Бесплатное занятие</h3>
+              <h2>Бесплатное занятие</h2>
               <div class="form__fields">
                 <label for="name">
                   <span class="visually-hidden">Имя</span>
@@ -607,10 +677,9 @@
               <button class="form__button btn" type="submit">отправить</button>
             </form>
           </div>
-
           <div class="info-group__contacts contacts">
             <div class="contacts__content">
-              <h3>Контакты</h3>
+              <h2>Контакты</h2>
               <dl class="contacts__content-left">
                 <dt>Адрес:</dt>
                 <dd>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</dd>
@@ -633,7 +702,7 @@
           <div class="footer__logo logo logo--footer">
             <a class="logo__link" href="#" aria-label="Логотип SyperGym">
               <svg width="88" height="32" focusable="false" aria-hidden="true">
-                <use xlink:href="img/sprite/sprite.svg#logotype"></use>
+                <use xlink:href="img/sprite.svg#logotype"></use>
               </svg>
             </a>
           </div>
@@ -662,21 +731,21 @@
               <li class="socials__item">
                 <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте">
                   <svg width="12" height="7">
-                    <use xlink:href="img/sprite/sprite.svg#vk"></use>
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link socials__link--ok" href="#" aria-label="Одноклассники">
                   <svg width="9" height="16">
-                    <use xlink:href="img/sprite/sprite.svg#ok"></use>
+                    <use xlink:href="img/sprite.svg#ok"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a class="socials__link socials__link--reddit" href="#" aria-label="Reddit">
                   <svg width="14" height="14">
-                    <use xlink:href="img/sprite/sprite.svg#reddit"></use>
+                    <use xlink:href="img/sprite.svg#reddit"></use>
                   </svg>
                 </a>
               </li>
@@ -684,38 +753,6 @@
           </div>
         </div>
       </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">
-            Размер этой модалки зависит от ширины контента,<br />
-            отключена анимация-скейл
-          </p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
     </div>
 
     <script src="js/vendor.min.js"></script>
