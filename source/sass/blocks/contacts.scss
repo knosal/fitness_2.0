@@ -28,13 +28,13 @@
     max-width: 100%;
   }
 
-  h3 {
+  h2 {
+    @include title-h2;
+
     grid-row: 1;
     grid-column: 1/-1;
-    font-family: $ff-alumni;
-    margin: 0 0 37px -3px;
-    font-weight: 600;
-    font-size: 54px;
+    margin-bottom: 37px;
+    margin-left: -3px;
     line-height: 65px;
     letter-spacing: 0.03em;
 

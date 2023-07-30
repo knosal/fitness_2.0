@@ -1,15 +1,12 @@
 const findAllVideos = () => {
   let videos = document.querySelectorAll('[data-video]');
-
-  for (let i = 0; i < videos.length; i++) {
-    setupVideo(videos[i]);
-  }
+  videos.forEach(setupVideo);
 };
 
 function setupVideo(video) {
-  let link = document.querySelector('[data-video-link]');
-  let media = document.querySelector('[data-video-media]');
-  let button = document.querySelector('[data-video-button]');
+  let link = video.querySelector('[data-video-link]');
+  let media = video.querySelector('[data-video-media]');
+  let button = video.querySelector('[data-video-button]');
   let id = parseMediaURL(media);
 
   video.addEventListener('click', () => {

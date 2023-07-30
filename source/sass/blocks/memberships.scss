@@ -25,9 +25,9 @@
   }
 
   h2 {
-    margin-bottom: 25px;
-
     @include title-h2;
+
+    margin-bottom: 25px;
   }
 }
 
@@ -43,8 +43,6 @@
   padding: 0 0 10px 0;
 
   border-bottom: 2px solid $color-border-grey;
-
-  gap: 25px 46px;
 }
 
 .memberships__button {

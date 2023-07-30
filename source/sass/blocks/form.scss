@@ -15,9 +15,10 @@
   }
 
   h2 {
-    font-family: $ff-alumni;
-    margin: 0 0 17px;
-    font-size: 54px;
+    @include title-h2;
+
+    margin-bottom: 40px;
+    color: $color-default-white;
     font-weight: 800;
     letter-spacing: 0.03em;
 

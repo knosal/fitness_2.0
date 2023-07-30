@@ -1,11 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-// import {initModals} from './modules/modals/init-modals';
-// import {Form} from './modules/form-validate/form';
-import {priceChange} from './modules/subscription-tabs';
-import {tabChangeTopic} from './modules/faq-topic';
-import {openAccordion} from './modules/faq-accordion';
-import {findAllVideos} from './modules/gym-video';
-// import './modules/slider';
+import {Form} from './modules/form-validate/form';
+import {priceChange} from './modules/subscription/subscription-tabs';
+import {initSwiper} from './modules/swiper/slider';
+import {tabChangeTopic} from './modules/accordion/faq-topic';
+import {openAccordion} from './modules/accordion/faq-accordion';
+import {findAllVideos} from './modules/video/gym-video';
 
 // ---------------------------------
 
@@ -19,14 +18,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    // initModals();
     findAllVideos();
     priceChange();
     tabChangeTopic();
     openAccordion();
+    initSwiper();
+    const form = new Form();
+    window.form = form;
+    form.init();
   });
 });
 
