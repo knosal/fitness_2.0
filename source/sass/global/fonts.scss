@@ -1,12 +1,13 @@
-//Roboto
 @font-face {
   font-style: normal;
   font-weight: 300;
   font-family: "Roboto Condensed";
 
   font-display: swap;
-  src: local("Roboto-Condensed"),
-    url("../fonts/RobotoCondensed-Light.woff2") format("woff2");
+  src: local("Roboto Condensed Light"),
+    local("RobotoCondensed-Light"),
+    url("../fonts/RobotoCondensed-Light.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Light.woff") format("woff");
 }
 
 @font-face {
@@ -15,8 +16,10 @@
   font-family: "Roboto Condensed";
 
   font-display: swap;
-  src: local("Roboto-Condensed"),
-    url("../fonts/RobotoCondensed-Regular.woff2") format("woff2");
+  src: local("Roboto Condensed"),
+    local("RobotoCondensed-Regular"),
+    url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -25,19 +28,22 @@
   font-family: "Roboto Condensed";
 
   font-display: swap;
-  src: local("Roboto-Condensed"),
-    url("../fonts/RobotoCondensed-Bold.woff2") format("woff2");
+  src: local("Roboto Condensed Bold"),
+    local("RobotoCondensed-Bold"),
+    url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 
-//Alumni
 @font-face {
   font-style: normal;
   font-weight: 600;
   font-family: "Alumni Sans";
 
   font-display: swap;
-  src: local("Alumni Sans"),
-    url("../fonts/AlumniSans-SemiBold.woff2") format("woff2");
+  src: local("Alumni Sans SemiBold"),
+    local("AlumniSans-SemiBold"),
+    url("../fonts/AlumniSans-SemiBold-600.woff2") format("woff2"),
+    url("../fonts/AlumniSans-SemiBold-600.woff") format("woff");
 }
 
 @font-face {
@@ -46,8 +52,10 @@
   font-family: "Alumni Sans";
 
   font-display: swap;
-  src: local("Alumni Sans"),
-    url("../fonts/AlumniSans-Bold.woff2") format("woff2");
+  src: local("Alumni Sans Bold"),
+    local("AlumniSans-Bold"),
+    url("../fonts/AlumniSans-Bold-700.woff2") format("woff2"),
+    url("../fonts/AlumniSans-Bold-700.woff") format("woff");
 }
 
 @font-face {
@@ -56,6 +64,8 @@
   font-family: "Alumni Sans";
 
   font-display: swap;
-  src: local("Alumni Sans"),
-    url("../fonts/AlumniSans-ExtraBold.woff2") format("woff2");
+  src:  local("Alumni Sans ExtraBold"),
+    local("AlumniSans-ExtraBold"),
+    url("../fonts/AlumniSans-ExtraBold-800.woff2") format("woff2"),
+    url("../fonts/AlumniSans-ExtraBold-800.woff") format("woff");
 }
