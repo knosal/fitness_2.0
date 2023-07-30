@@ -20,9 +20,9 @@
 
   <body>
     <div class="wrapper">
-      <div class="header-intro">
-        <header class="header">
-          <div class="header__wrapper container">
+      <header class="header">
+        <div class="header__nav">
+          <div class="header__inner container">
             <div class="header__logo logo">
               <a class="logo__link" href="#" aria-label="Логотип SyperGym">
                 <svg width="122" height="44" focusable="false" aria-hidden="true">
@@ -34,7 +34,7 @@
               <a class="header__phone" href="tel:7+8005555555">8-800-555-55-55</a>
             </div>
           </div>
-        </header>
+        </div>
 
         <section class="intro">
           <div class="intro__wrapper container">
@@ -58,7 +58,7 @@
             </div>
           </div>
         </section>
-      </div>
+      </header>
 
       <main>
         <section class="gym">
@@ -705,44 +705,33 @@
               </svg>
             </a>
           </div>
-          <nav class="footer__navigation navigation-footer">
-            <ul class="navigation-footer__list">
-              <li class="navigation-footer__item">
-                <a class="navigation-footer__link" href="#">Услуги</a>
-              </li>
-              <li class="navigation-footer__item">
-                <a class="navigation-footer__link" href="#">Абонементы</a>
-              </li>
-              <li class="navigation-footer__item">
-                <a class="navigation-footer__link" href="#">Акции</a>
-              </li>
-              <li class="navigation-footer__item">
-                <a class="navigation-footer__link" href="#">Тренеры</a>
-              </li>
-              <li class="navigation-footer__item">
-                <a class="navigation-footer__link" href="#">Расписание</a>
-              </li>
+          <nav class="footer__navigation">
+            <ul>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Абонементы</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Тренеры</a></li>
+              <li><a href="#">Расписание</a></li>
             </ul>
           </nav>
-          <div class="footer__socials socials">
-            <h2 class="visually-hidden">Социальные сети</h2>
-            <ul class="socials__list">
-              <li class="socials__item">
-                <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте">
+          <div class="footer__socials">
+            <ul aria-label="Социальные сети">
+              <li>
+                <a href="#" aria-label="Вконтакте">
                   <svg width="12" height="7">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--ok" href="#" aria-label="Одноклассники">
+              <li>
+                <a href="#" aria-label="Одноклассники">
                   <svg width="9" height="16">
                     <use xlink:href="img/sprite.svg#ok"></use>
                   </svg>
                 </a>
               </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--reddit" href="#" aria-label="Reddit">
+              <li>
+                <a href="#" aria-label="Reddit">
                   <svg width="14" height="14">
                     <use xlink:href="img/sprite.svg#reddit"></use>
                   </svg>
