@@ -98,12 +98,12 @@
 }
 
 .form__button {
-  border: 3px solid $color-default-white;
   padding: 17px;
   letter-spacing: 0.05em;
   width: 100%;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  outline: 3px solid $color-default-white;
   text-transform: uppercase;
 }

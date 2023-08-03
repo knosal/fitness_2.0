@@ -1,5 +1,6 @@
 .reviews__wrapper {
   max-width: 767px;
+  margin: 0 auto;
   padding: 87px 103px 120px;
   position: relative;
 
@@ -95,6 +96,8 @@
     border-radius: 50%;
     margin: 8px 0 0;
 
+    background-color: $color-grey;
+
     @include vp-767 {
       margin: 8px 0 0 16px;
     }
@@ -117,14 +120,15 @@
   }
 }
 
-.reviews__button-prev,
-.reviews__button-next {
+.reviews__button {
   position: absolute;
   --swiper-navigation-size: 32px;
 
   border: none;
   background: transparent;
   top: 56%;
+
+  z-index: 10;
 
   @include vp-1199 {
     top: 55%;
@@ -134,28 +138,28 @@
     --swiper-navigation-size: 19px;
     top: 54%;
   }
-}
 
-.reviews__button-prev {
-  left: 6%;
+  &--prev {
+    left: 2%;
 
-  @include vp-1199 {
-    left: -2%;
+    @include vp-1199 {
+      left: -2%;
+    }
+
+    @include vp-767 {
+      left: 4%;
+    }
   }
 
-  @include vp-767 {
-    left: 4%;
-  }
-}
+  &--next {
+    right: 2%;
 
-.reviews__button-next {
-  right: 6%;
+    @include vp-1199 {
+      right: -2%;
+    }
 
-  @include vp-1199 {
-    right: -2%;
-  }
-
-  @include vp-767 {
-    right: 4%;
+    @include vp-767 {
+      right: 4%;
+    }
   }
 }

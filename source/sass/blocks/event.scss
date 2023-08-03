@@ -13,7 +13,7 @@
 .event__wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   width: 100%;
   margin-bottom: 107px;
 
@@ -26,13 +26,33 @@
     max-width: 500px;
     margin-bottom: 66px;
   }
+
+  img {
+    width: auto;
+    height: 100%;
+
+    @include vp-767 {
+      flex-basis: 100%;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
 }
 
 .event__current {
-  width: 500px;
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: min-content 1fr min-content;
+
+  max-width: 660px;
   min-width: 450px;
-  max-height: 500px;
+  min-height: 500px;
+
   padding: 85px 77px;
+
+  font-weight: 400;
+  line-height: 1.5;
 
   color: $color-default-white;
 
@@ -43,48 +63,12 @@
     min-width: auto;
     min-height: 292px;
     padding: 51px 45px;
+    column-gap: 29px;
   }
 
   @include vp-767 {
     width: 100%;
     padding: 50px 44px;
-  }
-
-  p {
-    margin: 0;
-    margin-top: 33px;
-    margin-bottom: 55px;
-
-    font-size: 18px;
-
-    grid-column: 1 / span 3;
-    grid-row: 2;
-
-    @include vp-1199 {
-      margin-top: 10px;
-      margin-bottom: 20px;
-
-      font-size: 12px;
-    }
-
-    @include vp-767 {
-      margin-left: 3px;
-    }
-  }
-}
-
-.event__inner {
-  display: grid;
-
-  font-weight: 400;
-  line-height: 1.5;
-  column-gap: 50px;
-
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-
-  @include vp-1199 {
-    column-gap: 29px;
   }
 
   h2 {
@@ -112,11 +96,35 @@
       padding-left: 8px;
     }
   }
+
+  p {
+    margin: 0;
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    grid-column: 1 / span 3;
+    grid-row: 2;
+
+    @include vp-1199 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      font-size: 12px;
+    }
+
+    @include vp-767 {
+      margin-left: 3px;
+    }
+  }
 }
 
 .event__day {
+  grid-column: 2 / 4;
+
   width: 92px;
   margin-top: -6px;
+  margin-left: auto;
 
   @include vp-1199 {
     max-width: 63px;
@@ -124,6 +132,9 @@
 
   p {
     position: relative;
+
+    grid-row: 2 / 3;
+    grid-column: 1/-1;
 
     max-width: 92px;
     margin: 0;
@@ -199,8 +210,6 @@
 }
 
 .event__buy {
-  width: 100%;
-
   grid-column: 1 / span 3;
   grid-row: 3;
 

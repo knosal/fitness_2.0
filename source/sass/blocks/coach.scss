@@ -1,4 +1,6 @@
 .coach {
+  position: relative;
+
   @include vp-1199 {
     min-height: 423px;
   }
@@ -35,6 +37,7 @@
 
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   padding-bottom: 105px;
 
   @include vp-1199 {
@@ -58,10 +61,17 @@
   position: relative;
 
   min-height: 294px;
+  max-width: 260px;
 
   background-color: $color-grey;
 
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
   @include vp-767 {
+    margin: 0 auto;
+    max-width: 226px;
     min-height: auto;
   }
 
@@ -70,12 +80,10 @@
     min-height: 294px;
 
     @include vp-1199 {
-      width: 268px;
-      max-height: 294px;
+      min-height: 294px;
     }
 
     @include vp-767 {
-      width: 100%;
       min-height: 274px;
       max-height: 100vw;
     }
@@ -223,42 +231,36 @@
   }
 }
 
-.coach__button-next,
-.coach__button-prev {
+.coach__button {
   border: none;
-
-  @include vp-767 {
-    --swiper-navigation-size: 20px;
-  }
-  --swiper-navigation-size: 32px;
-}
-
-.coach__button-next {
-  top: 52%;
-  right: 46px;
-
-  @include vp-1199 {
-    top: 48%;
-    right: -14px;
-  }
+  z-index: 10;
+  top: 46%;
 
   @include vp-767 {
     top: 51%;
-    right: 13px;
-  }
-}
-
-.coach__button-prev {
-  top: 52%;
-  left: 46px;
-
-  @include vp-1199 {
-    top: 48%;
-    left: -14px;
   }
 
-  @include vp-767 {
-    top: 51%;
-    left: 13px;
+  &--next {
+    right: 2%;
+
+    @include vp-1199 {
+      right: -14px;
+    }
+
+    @include vp-767 {
+      right: 13px;
+    }
+  }
+
+  &--prev {
+    left: 2%;
+
+    @include vp-1199 {
+      left: -14px;
+    }
+
+    @include vp-767 {
+      left: 13px;
+    }
   }
 }

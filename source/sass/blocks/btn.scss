@@ -25,22 +25,70 @@
   }
 
   &--slider {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
     padding: 0;
 
-    color: $color-dark-grey;
+    color: $color-slate-grey;
+
+    border: none;
+    border-radius: 50%;
+    outline: 1px solid $color-transparent;
+    cursor: pointer;
+
+    transition: all $trans-default;
+
+    @include vp-767 {
+      width: 30px;
+      height: 30px;
+    }
 
     @include hover-focus {
-      outline-color: $color-sapphire;
-      outline-offset: 2px;
+      outline: 1px solid $color-sapphire;
+
+      &:active {
+        background-color: $color-sapphire;
+
+        svg {
+          stroke: $color-default-white;
+        }
+      }
+    }
+
+    svg {
+      transition: stroke $trans-default;
+
+      @include vp-767 {
+        height: 19px;
+      }
+
+      stroke: $color-sapphire;
+    }
+
+    &:active {
+      background-color: $color-sapphire;
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+
+    &:disabled {
+      svg {
+        opacity: 0.3;
+      }
     }
   }
 
   &--empty {
-    padding: 21px 55px 18px;
+    padding: 29px 113px;
 
     color: $color-default-white;
-
-    outline: 4px solid $color-default-white;
 
     @include hover-focus {
       color: $color-egyptian-blue;

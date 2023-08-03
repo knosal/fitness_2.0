@@ -32,34 +32,77 @@
 }
 
 .memberships__controls {
-  position: relative;
+  ol {
+    position: relative;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 341px;
-  margin-bottom: 39px;
-  padding: 0 0 10px 0;
+    margin: 0 auto;
+    margin-bottom: 37px;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 46px;
 
-  border-bottom: 2px solid $color-border-grey;
+    list-style: none;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $color-border-grey;
+
+      content: "";
+    }
+
+    @include vp-1199 {
+      gap: 51px;
+      margin-bottom: 44px;
+    }
+
+    @include vp-767 {
+      gap: 40px;
+      margin-bottom: 33px;
+    }
+  }
 }
 
 .memberships__button {
   position: relative;
 
-  padding: 0;
-
+  padding: 20px 2px;
   font-size: 20px;
   line-height: 30px;
   color: $color-sapphire;
 
-  background-color: transparent;
+  background-color: $color-transparent;
   border: none;
-  outline: 0;
-  outline-color: $color-sapphire;
+
   cursor: pointer;
   opacity: 0.5;
+
+  @include hover-focus {
+    color: $color-sapphire;
+
+    &::after {
+      background-color: $color-crimson;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $color-sapphire;
+
+    &::after {
+      background-color: $color-crimson;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 [data-month].is-active {
@@ -68,7 +111,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -12px;
+    bottom: 0;
     left: 0;
     z-index: 5;
 
@@ -82,6 +125,7 @@
     }
   }
 }
+
 
 .memberships__content {
   display: flex;

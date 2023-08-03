@@ -1,5 +1,8 @@
 .accordion {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .accordion__item {
@@ -20,48 +23,59 @@
     color: $color-sapphire;
     cursor: pointer;
 
-    span {
-      position: relative;
-      display: inline-block;
-      width: 22px;
-      height: 22px;
-      padding: 11px;
-      margin-left: auto;
-
-      border: 1px solid;
-      border-radius: 22px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 6px;
-
-        display: block;
-        width: 10px;
-        height: 1px;
-
-        background: currentColor;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 11px;
-        top: 6px;
-
-        display: block;
-        width: 1px;
-        height: 10px;
-
-        background: currentColor;
-      }
-    }
-
     &::-webkit-details-marker {
       display: none;
     }
   }
+
+  span {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    padding: 11px;
+    margin-left: auto;
+
+    outline: 1px solid;
+    border-radius: 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 6px;
+
+      display: block;
+      width: 10px;
+      height: 1px;
+
+      background: currentColor;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 6px;
+
+      display: block;
+      width: 1px;
+      height: 10px;
+
+      background: currentColor;
+    }
+
+
+    @include hover-focus {
+      background-color: $color-resolution-blue;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
 
   p {
     margin: 0;
