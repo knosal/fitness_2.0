@@ -1,5 +1,4 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
 import {priceChange} from './modules/subscription/subscription-tabs';
 import {initSwiper} from './modules/swiper/slider';
 import {tabChangeTopic} from './modules/accordion/faq-topic';
@@ -24,9 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
     tabChangeTopic();
     openAccordion();
     initSwiper();
-    const form = new Form();
-    window.form = form;
-    form.init();
   });
 });
 

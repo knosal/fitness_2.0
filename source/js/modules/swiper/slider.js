@@ -6,8 +6,8 @@ export const initSwiper = () => {
     grabCursor: false,
 
     navigation: {
-      nextEl: '.coach__button-next',
-      prevEl: '.coach__button-prev',
+      nextEl: '.coach__button--next',
+      prevEl: '.coach__button--prev',
     },
 
     mousewheel: false,
@@ -39,8 +39,8 @@ export const initSwiper = () => {
     grabCursor: true,
 
     navigation: {
-      nextEl: '.reviews__button-next',
-      prevEl: '.reviews__button-prev',
+      nextEl: '.reviews__button--next',
+      prevEl: '.reviews__button--prev',
     },
 
     mousewheel: false,
