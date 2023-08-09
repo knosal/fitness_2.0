@@ -1,100 +1,121 @@
 .tabs {
   display: flex;
   justify-content: space-between;
+
   gap: 40px;
 
   @include vp-1199 {
+    gap: 10px;
     flex-direction: column;
+  }
+
+  @media (max-width: 320px) {
+    gap: 7px;
   }
 }
 
 .tabs__control {
   position: relative;
+
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+
   width: 100%;
   max-width: 260px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
   font-size: 18px;
   line-height: 24px;
 
+  gap: 10px;
+
   @include vp-1199 {
-    flex-direction: row;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 7px;
+    display: grid;
+    margin-bottom: 29px;
     max-width: none;
   }
 
   @include vp-767 {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 7px;
+    margin-bottom: 29px;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 21px;
   }
 }
 
 .tabs__button {
-  border: 0;
-  background-color: $color-default-white;
-  color: $color-sapphire;
-  line-height: 1;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  outline: 1px solid $color-border-grey;
-  max-width: 260px;
-  min-height: 54px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 18px 107px;
+  align-items: center;
+  width: 100%;
+  max-width: 260px;
+  padding: 18px 0;
 
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  color: $color-sapphire;
+
+  background-color: $color-default-white;
+  border: 0;
+  outline: 1px solid $color-border-grey;
+  cursor: pointer;
 
   @include vp-1199 {
-    width: 100%;
-    min-width: 162px;
-    padding: 18px 58px;
+    max-width: none;
   }
 
   @include vp-767 {
+    padding: 14px 0;
     font-size: 16px;
-    max-width: 141px;
-    min-width: auto;
-    padding: 0;
   }
 
   @include hover-focus {
     color: $color-sapphire;
+
+    background: $color-default-white;
     outline: 1px solid $color-sapphire;
     box-shadow: none;
-    background: $color-default-white;
 
     &:active {
       color: $color-default-white;
+
       background: $color-button-gradient;
     }
   }
 
   &:active {
     color: $color-default-white;
+
     background: $color-button-gradient;
   }
 
   &:focus-within {
     color: $color-sapphire;
-    outline: 1px solid $color-sapphire;
+
     background: $color-default-white;
+    outline: 1px solid $color-sapphire;
+  }
+
+  &.is-active {
+    color: $color-default-white;
+
+    background: $color-button-gradient;
   }
 }
 
-[data-tabs].is-active {
-  color: $color-default-white;
-  background: $color-button-gradient;
-}
-
 .tabs__list {
-  min-height: 450px;
   width: 100%;
+  min-height: 450px;
 
   font-size: 15px;
   line-height: 30px;
@@ -103,8 +124,10 @@
 
 .tabs__item {
   display: none;
-}
 
-.tabs__item.is-active {
-  display: block;
+  transition: display $trans-default;
+
+  &.is-active {
+    display: block;
+  }
 }

@@ -1,6 +1,6 @@
 .gym {
   padding-top: 120px;
-  padding-bottom: 235px;
+  padding-bottom: 8px;
   min-height: 636px;
 
   @include vp-1199 {
@@ -18,16 +18,15 @@
   position: relative;
   width: 100%;
   display: flex;
-  gap: 80px;
   justify-content: flex-end;
-  margin-right: 9px;
+
+  gap: 80px;
 
   @include vp-1199 {
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 33px;
-
-    margin-bottom: 150px;
+    gap: 41px;
   }
 
   @include vp-767 {
@@ -37,12 +36,11 @@
 }
 
 .gym__about {
-  align-self: center;
-
   max-width: 360px;
-  margin-top: 38px;
+  margin-top: 40px;
 
   @include vp-1199 {
+    align-self: center;
     max-width: 502px;
     margin-top: 0;
     padding: 0;
@@ -51,9 +49,9 @@
   }
 
   @include vp-767 {
-    padding: 0 15px;
-
     text-align: start;
+    padding: 0 15px;
+    max-width: fit-content
   }
 
   h2 {
@@ -95,12 +93,15 @@
   margin-top: 38px;
 
   @include vp-1199 {
+    min-width: 505px;
+
     p:not(:first-child) {
       display: none;
     }
   }
 
   @include vp-767 {
+    min-width: auto;
     margin-top: 25px;
     padding-right: 30px;
   }
@@ -120,22 +121,26 @@
 }
 
 .gym__picture {
-  max-height: 401px;
-  margin: 0;
+  @include vp-767 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
 
-  background-color: $color-ghost-white;
+  picture {
+    @include vp-767 {
+      width: inherit;
+    }
+  }
 
   img {
-    width: 100%;
-
+    background-color: $color-ghost-white;
     object-fit: cover;
 
-    @include vp-1199 {
-      height: 345px;
-    }
-
     @include vp-767 {
-      height: 313px;
+      width: 100%;
     }
   }
 }

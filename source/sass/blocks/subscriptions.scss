@@ -29,7 +29,8 @@
   min-width: 290px;
   max-width: 360px;
   min-height: 448px;
-  padding: 56px 69px;
+
+  padding: 56px 69px 63px 69px;
 
   text-align: center;
 
@@ -65,6 +66,10 @@
     padding: 41px 33px;
   }
 
+  @media (max-width: 320px) {
+    padding-bottom: 49px;
+  }
+
   @include hover-focus {
     border-image: $color-border-gradient;
     border-image-width: 8px;
@@ -89,6 +94,7 @@
 .subscriptions__title {
   h3 {
     @include title-h3;
+    letter-spacing: 2px;
 
     @include vp-767 {
       margin-bottom: 6px;
@@ -102,6 +108,10 @@
   }
 
   p {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -110,6 +120,12 @@
 
     @include vp-1199 {
       margin-bottom: 59px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    p {
+      margin-bottom: 37px;
     }
   }
 }
@@ -129,7 +145,8 @@
   color: $color-egyptian-blue;
 
   @include vp-1199 {
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 33px;
   }
 
   &::after {
@@ -146,12 +163,20 @@
     opacity: 0.48;
 
     @include vp-767 {
-      top: 48%;
+      top: -44px;
+      left: 0;
+      right: 0;
+      transform: translateX(-6px);
 
       font-size: 80px;
     }
   }
 
+  @include vp-767 {
+    font-size: 48px;
+
+    transform: translateX(6px);
+  }
 
   svg {
     z-index: 2;
@@ -162,5 +187,16 @@
 
       transform: translateX(-8px);
     }
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 25px;
+  }
+}
+
+.subscriptions__buy {
+  @include vp-1199 {
+    margin: 0 auto;
+    max-width: 206px;
   }
 }

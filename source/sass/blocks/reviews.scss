@@ -1,25 +1,29 @@
 .reviews__wrapper {
   max-width: 767px;
   margin: 0 auto;
-  padding: 87px 103px 120px;
+  padding: 121px 103px 120px;
   position: relative;
 
   @include vp-1199 {
     max-width: 657px;
-    padding: 60px 45px 100px;
+    padding: 94px 45px 100px;
   }
 
   @include vp-767 {
-    max-width: 100%;
-    padding: 33px 47px 70px;
+    max-width: none;
+    padding: 33px 32px 70px;
+  }
+
+  @media (max-width: 320px) {
+    padding-top: 63px;
   }
 
   h2 {
-    margin: 0;
+    @include title-h2;
+
     margin-left: 8px;
     margin-bottom: 37px;
-    font-family: $ff-alumni;
-    font-size: 54px;
+
     line-height: 65px;
     letter-spacing: 0.03em;
     text-align: center;
@@ -47,10 +51,6 @@
   color: $color-default-white;
   min-height: 242px;
   box-shadow: $box-shadow;
-
-  @include vp-767 {
-    min-height: 335px;
-  }
 }
 
 .reviews__content-inner {
@@ -126,12 +126,16 @@
 
   border: none;
   background: transparent;
-  top: 56%;
+  top: 54%;
 
   z-index: 10;
 
   @include vp-1199 {
-    top: 55%;
+    top: 50%;
+  }
+
+  @media (max-width: 768px) {
+    top: 53%;
   }
 
   @include vp-767 {
@@ -140,26 +144,34 @@
   }
 
   &--prev {
-    left: 2%;
+    left: 4%;
 
     @include vp-1199 {
-      left: -2%;
+      left: -5px;
+    }
+
+    @media (max-width: 768px) {
+      left: -30px;
     }
 
     @include vp-767 {
-      left: 4%;
+      left: -6px;
     }
   }
 
   &--next {
-    right: 2%;
+    right: 4%;
 
     @include vp-1199 {
-      right: -2%;
+      right: -5px;
+    }
+
+    @media (max-width: 768px) {
+      right: -30px;
     }
 
     @include vp-767 {
-      right: 4%;
+      right: -6px;
     }
   }
 }

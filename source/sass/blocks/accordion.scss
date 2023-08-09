@@ -3,10 +3,16 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
 }
 
 .accordion__item {
-  padding: 25px 0;
+  padding: 24px 0;
   border-top: 1px solid $color-border-grey;
 
   h3 {
@@ -26,45 +32,47 @@
     &::-webkit-details-marker {
       display: none;
     }
+
+    @media (max-width: 320px) {
+     font-size: 18px;
+    }
   }
 
   span {
     position: relative;
     display: inline-block;
-    width: 22px;
-    height: 22px;
-    padding: 11px;
+    width: 44px;
+    height: 44px;
+
     margin-left: auto;
+    padding: 22px;
 
     outline: 1px solid;
-    border-radius: 22px;
+    border-radius: 44px;
 
+    transition: background-color $trans-default;
+
+    &::after,
     &::before {
       content: "";
       position: absolute;
-      top: 10px;
-      left: 6px;
-
       display: block;
-      width: 10px;
-      height: 1px;
-
+      top: 50%;
+      left: 50%;
       background: currentColor;
+    }
+
+    &::before {
+      transform: translate(-50%, 50%);
+      width: 20px;
+      height: 1px;
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      left: 11px;
-      top: 6px;
-
-      display: block;
+      transform: translate(50%, -50%);
       width: 1px;
-      height: 10px;
-
-      background: currentColor;
+      height: 20px;
     }
-
 
     @include hover-focus {
       background-color: $color-resolution-blue;
@@ -74,8 +82,24 @@
         background-color: $color-default-white;
       }
     }
-  }
 
+    @media (max-width: 320px) {
+      width: 32px;
+      height: 32px;
+      padding: 16px;
+
+      &::before {
+        width: 15px;
+        height: 1px;
+      }
+
+      &::after {
+        width: 1px;
+        height: 15px;
+      }
+
+    }
+  }
 
   p {
     margin: 0;
@@ -85,16 +109,29 @@
     line-height: 1.4;
 
     opacity: 0;
+    max-width: 670px;
     max-height: 0;
     overflow: hidden;
+
+    transition: opacity $trans-default;
+
+    @media (max-width: 320px) {
+      font-size: 16px;
+    }
   }
 
   &:last-child {
     border-bottom: 1px solid $color-border-grey;
   }
+
+  @media (max-width: 320px) {
+    padding: 19px 0;
+  }
 }
 
 .accordion__item.is-open {
+  padding: 23px 0;
+
   h3 {
     span {
       background: $color-resolution-blue;
@@ -109,7 +146,7 @@
     }
 
     + p {
-      margin-top: 14px;
+      margin-top: 9px;
       opacity: 1;
       max-height: max-content;
     }

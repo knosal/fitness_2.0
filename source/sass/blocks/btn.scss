@@ -3,7 +3,7 @@
   flex-shrink: 0;
   justify-content: center;
   padding: 24px 42px;
-
+  border: none;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -13,6 +13,7 @@
   letter-spacing: 0.6px;
 
   background-color: transparent;
+  user-select: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
@@ -86,30 +87,31 @@
   }
 
   &--empty {
-    padding: 29px 113px;
-
+    outline: 4px solid $color-default-white;
     color: $color-default-white;
 
     @include hover-focus {
       color: $color-egyptian-blue;
 
       background-color: $color-default-white;
+
+      &:active {
+        color: $color-sapphire;
+      }
     }
 
-    @include focus {
-      color: $color-sapphire;
-    }
-
-    @include active {
+    &:active {
       color: $color-sapphire;
 
       background-color: $color-default-white;
     }
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 
   &--background {
-    width: 206px;
-
     color: $color-sapphire;
 
     outline: 2px solid $color-sapphire;
@@ -117,18 +119,107 @@
     @include hover-focus {
       color: $color-default-white;
 
-      background: $color-button-gradient;
+      background-color: $color-button-gradient;
       border: none;
       outline: none;
+
+      &:active {
+        color: rgb(255, 255, 255, 0.7);
+      }
     }
 
-    @include focus {
-      opacity: 0.7;
+    &:active {
+      color: rgb(255, 255, 255, 0.7);
+
+      background-color: $color-button-gradient;
+    }
+  }
+
+  &--play {
+    position: relative;
+
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-image: $color-button-video;
+    background-color: $color-transparent;
+
+    transition: background-color $trans-default;
+
+    &::before {
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+      background-image: $color-button-video;
+      mask-image: url("../../img/sprite/ellipse.svg");
+      opacity: 0.8;
+      border-radius: 50%;
+
+      content: "";
+      transition: opacity $trans-default;
+    }
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      background-image: none;
+      background-size: 0;
+
+      &::before {
+        background: $color-sapphire;
+        opacity: 1;
+      }
+    }
+
+    @include active {
+      width: 58px;
+      height: 58px;
+      background: $color-default-white;
+
+      &::before {
+        background: $color-sapphire;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      width: 58px;
+      height: 58px;
+      background: $color-default-white;
+
+      &::before {
+        background: $color-sapphire;
+        opacity: 1;
+      }
     }
 
     &:disabled {
-      background-color: $color-default-white;
-      opacity: 0.3;
+      opacity: 0.4;
+      background: $color-default-white;
+
+      &::before {
+        background: $color-sapphire;
+        opacity: 0.4;
+      }
+    }
+
+    @include vp-1199 {
+      width: 52px;
+      height: 52px;
+
+      &::before {
+        width: 73px;
+        height: 73px;
+
+        mask-image: url("../../img/sprite/ellipse-1199.svg");
+      }
     }
   }
 }

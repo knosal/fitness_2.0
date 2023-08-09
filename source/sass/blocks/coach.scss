@@ -1,8 +1,20 @@
 .coach {
-  position: relative;
+  padding-top: 103px;
+  padding-bottom: 105px;
+
 
   @include vp-1199 {
     min-height: 423px;
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 44px;
+    padding-bottom: 71px;
+  }
+
+  @media (max-width: 320px) {
+    padding-top: 61px;
   }
 
   h2 {
@@ -34,50 +46,50 @@
 
 .coach__wrapper {
   position: relative;
+}
 
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding-bottom: 105px;
-
-  @include vp-1199 {
-    max-width: 656px;
-    padding-bottom: 100px;
-  }
-
-  @include vp-767 {
-    max-width: 500px;
-    padding: 0 25px 70px;
-  }
-
+.coach__title {
   h2 {
     @include title-h2;
-
     margin-bottom: 48px;
+
+    @include vp-1199 {
+      margin: 0 0 31px;
+
+      text-align: center;
+    }
+
+    @include vp-767 {
+      margin: 0 0 42px;
+    }
   }
 }
 
 .coach__inner {
   position: relative;
 
-  min-height: 294px;
   max-width: 260px;
 
-  background-color: $color-grey;
+  cursor: pointer;
 
   @include vp-1199 {
     max-width: 268px;
   }
 
   @include vp-767 {
-    margin: 0 auto;
+    width: fit-content;
     max-width: 226px;
-    min-height: auto;
+  }
+
+  @media (max-width: 500px) {
+    margin: 0 auto;
   }
 
   img {
-    width: 100%;
     min-height: 294px;
+    background-color: $color-grey;
+
+    object-fit: cover;
 
     @include vp-1199 {
       min-height: 294px;
@@ -87,8 +99,6 @@
       min-height: 274px;
       max-height: 100vw;
     }
-
-    object-fit: cover;
   }
 }
 
@@ -102,8 +112,7 @@
   justify-content: start;
   width: 100%;
   height: 100%;
-  padding: 50px 30px 23px;
-  overflow-y: auto;
+  padding: 51px 45px 23px;
 
   background-color: none;
 
@@ -161,12 +170,13 @@
 
 .coach__info {
   height: 0;
+  max-height: 210px;
 
   transform: scale(0);
 
   p {
     margin: 0;
-
+    margin-bottom: 32px;
     text-align: center;
     color: $color-spindle;
 
@@ -176,8 +186,12 @@
   }
 
   ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
     margin: 0;
-    padding: 32px 0 0 41px;
+    padding-left: 24px;
 
     list-style: none;
     color: $color-default-white;
@@ -188,9 +202,6 @@
 
     li {
       position: relative;
-
-      margin: 0 auto;
-      margin-bottom: 13px;
 
       font-size: 14px;
 
@@ -218,7 +229,6 @@
   margin: 0;
 
   @include vp-767 {
-    max-width: 260px;
     margin: auto;
   }
 
@@ -229,38 +239,35 @@
 
     list-style: none;
   }
+
+  & > li {
+    width: 237.75px;
+    margin-right: 15px;
+  }
 }
 
 .coach__button {
   border: none;
   z-index: 10;
-  top: 46%;
+  top: 57%;
 
   @include vp-767 {
-    top: 51%;
+    top: 60%;
   }
 
   &--next {
-    right: 2%;
-
-    @include vp-1199 {
-      right: -14px;
-    }
+    right: -78px;
 
     @include vp-767 {
-      right: 13px;
+      right: -37px;
     }
   }
 
   &--prev {
-    left: 2%;
-
-    @include vp-1199 {
-      left: -14px;
-    }
+    left: -78px;
 
     @include vp-767 {
-      left: 13px;
+      left: -37px;
     }
   }
 }

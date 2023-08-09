@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {Form} from './modules/form-validate/form';
 import {priceChange} from './modules/subscription/subscription-tabs';
 import {initSwiper} from './modules/swiper/slider';
 import {tabChangeTopic} from './modules/accordion/faq-topic';
-import {openAccordion} from './modules/accordion/faq-accordion';
+import {openAccordion, focusAccordion} from './modules/accordion/faq-accordion';
 import {findAllVideos} from './modules/video/gym-video';
 
 // ---------------------------------
@@ -18,11 +19,17 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   window.addEventListener('load', () => {
+
     findAllVideos();
     priceChange();
-    tabChangeTopic();
+
     openAccordion();
+    focusAccordion();
+    tabChangeTopic();
     initSwiper();
+    const form = new Form();
+    window.form = form;
+    form.init();
   });
 });
 

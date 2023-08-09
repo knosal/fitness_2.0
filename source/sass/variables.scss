@@ -12,6 +12,7 @@ $color-red:                       #ed0233;
 $color-cobalt:                    #0041ca;
 $color-slate-grey:                #74819c;
 $color-black-russian:             #030a1a;
+$color-background-color:          #010245;
 
 // ---------------------------------
 
@@ -30,6 +31,7 @@ $box-shadow:                        0 0 40px rgba(28, 51, 116, 0.2);
 
 $black-to-right:                  linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $color-border-gradient:           linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%) 1;
+$color-button-video:              linear-gradient(-120deg, #ed0233 0, #003eb7 100%);
 $color-button-gradient:           linear-gradient(90deg, rgba(237, 2, 51, 1) 0%, rgba(0, 62, 183, 1) 100%);
 $color-text-gradient:             linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
 
