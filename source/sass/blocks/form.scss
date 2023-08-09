@@ -1,6 +1,6 @@
 .form {
   padding-top: 58px;
-  padding-right: 14px;
+  padding-right: 183px;
   padding-bottom: 66px;
   min-height: 337px;
   background-color: $color-sapphire;
@@ -42,7 +42,6 @@
 .form__content {
   margin-left: auto;
   max-width: 410px;
-  margin-left: -70px;
 
   @include vp-1199 {
     max-width: 100%;
