@@ -12,3 +12,6 @@ source/css/*.css
 source/css/*.map
 Thumbs.db
 build/*
+
+source/img/pixelperfect
+source/js/modules/dev.js

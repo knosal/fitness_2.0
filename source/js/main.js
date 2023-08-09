@@ -5,6 +5,7 @@ import {initSwiper} from './modules/swiper/slider';
 import {tabChangeTopic} from './modules/accordion/faq-topic';
 import {openAccordion, focusAccordion} from './modules/accordion/faq-accordion';
 import {findAllVideos} from './modules/video/gym-video';
+// import {createScript} from './modules/dev';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     focusAccordion();
     tabChangeTopic();
     initSwiper();
+    // createScript();
     const form = new Form();
     window.form = form;
     form.init();

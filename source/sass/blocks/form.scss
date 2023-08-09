@@ -1,4 +1,7 @@
 .form {
+  padding-top: 58px;
+  padding-right: 14px;
+  padding-bottom: 66px;
   min-height: 337px;
   background-color: $color-sapphire;
   color: $color-default-white;
@@ -37,6 +40,7 @@
 }
 
 .form__content {
+  margin-left: auto;
   max-width: 410px;
   margin-left: -70px;
 
