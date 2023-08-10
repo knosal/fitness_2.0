@@ -46,16 +46,31 @@
 
 .coach__wrapper {
   position: relative;
+
+  margin: 0 auto;
+  padding: 0 0 104px;
+  max-width: 1366px;
+  width: 100%;
+
+  @include vp-1199 {
+    padding: 5px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 6px 15px 50px;
+  }
 }
 
 .coach__title {
   h2 {
+    padding-left: 103px;
+
     @include title-h2;
     margin-bottom: 48px;
 
     @include vp-1199 {
       margin: 0 0 31px;
-
+      padding-left: 0;
       text-align: center;
     }
 
@@ -226,10 +241,21 @@
 }
 
 .coach__slider {
-  margin: 0;
+  width: 1160px;
+  margin: 0 auto;
+
+  @media (min-width: $vp-1200) and (max-width: 1360px) {
+    width: 1055px;
+  }
+
+  @include vp-1199 {
+    padding-left: 4px;
+    width: 576px;
+  }
 
   @include vp-767 {
-    margin: auto;
+    padding: 0;
+    width: 226px;
   }
 
   & > ul {
@@ -249,25 +275,42 @@
 .coach__button {
   border: none;
   z-index: 10;
-  top: 57%;
+  top: 45%;
+
+  @include vp-1199 {
+    top: 48%;
+  }
 
   @include vp-767 {
-    top: 60%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
   }
 
   &--next {
-    right: -78px;
+    right: 27px;
 
     @include vp-767 {
-      right: -37px;
+      right: 10px;
     }
   }
 
   &--prev {
-    left: -78px;
+    left: 27px;
 
     @include vp-767 {
-      left: -37px;
+      left: 10px;
+    }
+  }
+
+
+  @media (min-width: $vp-1200) and (max-width: 1360px) {
+    &--prev {
+      left: 1%;
+    }
+
+    &--next {
+      right: 1%;
     }
   }
 }

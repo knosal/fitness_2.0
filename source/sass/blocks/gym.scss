@@ -110,7 +110,7 @@
     font-weight: 300;
     font-size: 16px;
 
-    &:first-child {
+    &:not(:last-child) {
       margin-bottom: 10px;
 
       @include vp-1199 {

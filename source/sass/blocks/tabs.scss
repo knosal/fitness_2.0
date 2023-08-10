@@ -69,6 +69,7 @@
   border: 0;
   outline: 1px solid $color-border-grey;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1199 {
     max-width: none;

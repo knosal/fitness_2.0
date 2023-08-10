@@ -13,13 +13,57 @@
   padding-top: 120px;
   padding-bottom: 120px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -95px;
+    width: 321px;
+    height: 384px;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 0;
+    background-image: image-set(url("../img/background/pancakes.webp") type("image/webp"),
+        url("../img/background/pancakes.png") type("image/png"));
+  }
+
+  @media (min-resolution: $retina-dppx) and (min-width: $vp-1200) {
+    &::after {
+      width: 286px;
+      background-image: image-set(url("../img/background/pancakes@2x.png") type("image/png"),
+          url("../img/background/pancakes@2x.webp") type("image/webp"));
+      background-size: cover;
+    }
+  }
+
   @include vp-1199 {
     padding-top: 101px;
     padding-bottom: 80px;
+
+    &::after {
+      width: 348px;
+      height: 395px;
+      bottom: -100px;
+      background-image: image-set(url("../img/background/pancakes-tablet.webp") type("image/webp"),
+          url("../img/background/pancakes-tablet.png") type("image/png"));
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      &::after {
+        background-image: image-set(url("../img/background/pancakes-tablet@2x.png") type("image/png"),
+            url("../img/background/pancakes-tablet@2x.webp") type("image/webp"));
+        background-size: cover;
+      }
+    }
   }
 
   @include vp-767 {
     padding-top: 65px;
+
+    &::after {
+      content: none;
+      background: none;
+    }
   }
 
   h2 {
@@ -79,6 +123,7 @@
 
   background-color: $color-transparent;
   border: none;
+  user-select: none;
 
   cursor: pointer;
   opacity: 0.5;
@@ -143,27 +188,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.memberships__picture {
-  img {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -130px;
-
-    width: 290px;
-    height: 495px;
-    z-index: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @include vp-1199 {
-      bottom: -143px;
-    }
-
-    @include vp-767 {
-      display: none;
-    }
-  }
 }

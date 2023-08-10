@@ -64,6 +64,7 @@
 
   h3 {
     margin: 0;
+    margin-bottom: 36px;
     margin-top: 10px;
     grid-row: 2 / 3;
     grid-column: 1/-1;
@@ -73,8 +74,6 @@
     line-height: 150%;
 
     @include vp-1199 {
-      margin: 0;
-
       font-size: 12px;
     }
   }
@@ -98,13 +97,11 @@
   }
 }
 
-.games__details {
+.event__info {
   margin-top: 2px;
   grid-column: -2/-1;
   align-self: center;
-}
 
-.games-info {
   dl {
     margin: 0;
     margin-top: 3px;
@@ -175,7 +172,7 @@
   }
 }
 
-.games-info__day {
+.event__day {
   grid-row: 1/-1;
 
   font-size: 40px;
@@ -187,16 +184,16 @@
   }
 }
 
-.games-info__month {
+.event__month {
   grid-row: 2 / 3;
 }
 
-.games-info__year {
+.event__year {
   grid-row: 3 / 4;
 }
 
-.games-info__month,
-.games-info__year {
+.event__month,
+.event__year {
   font-size: 14px;
   line-height: 16px;
 
@@ -206,7 +203,7 @@
   }
 }
 
-.games-info__time {
+.event__time {
   grid-row: 1/-1;
 }
 

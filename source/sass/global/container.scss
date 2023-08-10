@@ -18,20 +18,20 @@
     }
   }
 
-  &--coach {
-    @include vp-1199 {
-      padding: 0 100px;
-    }
-
-    @include vp-767 {
-      padding: 0 47px;
-    }
-  }
-
   &--advantages {
     @media (max-width: 320px) {
       padding:0;
     }
+  }
 
+  &--info-group {
+    @media (min-width: $vp-1200) {
+      max-width: 616px;
+      margin-left: auto;
+      margin-right: 0;
+      padding-right: 0;
+    }
   }
 }
+
+
