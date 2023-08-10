@@ -81,7 +81,7 @@
 
     &:disabled {
       svg {
-        opacity: 0.3;
+        opacity: 0.6;
       }
     }
   }
@@ -136,22 +136,29 @@
   }
 
   &--play {
-    position: relative;
-
-    width: 72px;
-    height: 72px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: none;
-    outline: none;
-    background-image: $color-button-video;
-    background-color: $color-transparent;
 
-    transition: background-color $trans-default;
+    background: none url("../img/sprite/video-button-default.svg") no-repeat;
+
+    @include hover-focus {
+      background-image: url("../img/sprite/video-button-hover-focus.svg");
+    }
+
+    &:active {
+      background-image: url("../img/sprite/video-button-active.svg");
+    }
+
+    &:disabled {
+      background-image: url("../img/sprite/video-button-disabled.svg");
+      pointer-events: none;
+    }
+/*
 
     &::before {
       position: absolute;
@@ -159,7 +166,7 @@
       width: 100px;
       height: 100px;
       background-image: $color-button-video;
-      mask-image: url("../../img/background/ellipse.svg");
+      mask-image: url("../../img/sprite/ellipse.svg");
       opacity: 0.8;
       border-radius: 50%;
 
@@ -218,8 +225,12 @@
         width: 73px;
         height: 73px;
 
-        mask-image: url("../../img/background/ellipse-1199.svg");
+        border-image: $color-border-gradient;
+        border-image-width: 2px;
+        border-image-slice: 4;
+
+        //mask-image: url("../../img/background/ellipse-1199.svg");
       }
-    }
+    }*/
   }
 }

@@ -8,17 +8,41 @@ function setupVideo(video) {
   let media = video.querySelector('[data-video-media]');
   let button = video.querySelector('[data-video-button]');
   let id = parseMediaURL(media);
+  let currentIframe = null;
+  let isActive = false;
 
   video.addEventListener('click', () => {
-    let iframe = createIframe(id);
+    if (!isActive) {
+      let iframe = createIframe(id);
+      currentIframe = iframe;
 
-    link.remove();
-    button.remove();
-    video.appendChild(iframe);
+      link.remove();
+      button.remove();
+      video.classList.remove('is-disabled');
+      video.classList.add('is-active');
+      video.appendChild(iframe);
+
+      isActive = true;
+    } else {
+
+      video.classList.remove('is-active');
+      video.classList.add('is-disabled');
+
+      if (currentIframe) {
+        currentIframe.remove();
+      }
+
+      isActive = false;
+    }
+
+    link.removeAttribute('href');
   });
 
-  link.removeAttribute('href');
-  video.classList.add('is-active');
+  if (currentIframe) {
+    currentIframe.addEventListener('pause', () => {
+      video.classList.add('is-disabled');
+    });
+  }
 }
 
 function parseMediaURL(media) {

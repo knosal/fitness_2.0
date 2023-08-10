@@ -27,7 +27,6 @@
   }
 }
 
-
 .reviews__slider {
   ul {
     margin: 0;
@@ -41,7 +40,7 @@
   blockquote {
     margin: 0 auto;
     padding: 62px 61px 60px 58px;
-    width: 48%;
+    width: 560px;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: min-content auto;
@@ -53,14 +52,30 @@
 
     @include vp-1199 {
       padding: 62px 62px 60px 61px;
-      width: 83%;
+      width: 566px;
     }
 
     @include vp-767 {
-      width: 78%;
+      width: 90%;
       padding: 43px 25px 31px 25px;
       grid-template-columns: 47% auto;
       column-gap: 18px;
+    }
+
+    @media (max-width: 600px) {
+      width: 87%;
+    }
+
+    @media (max-width: 500px) {
+      width: 83%;
+    }
+
+    @media (max-width: 450px) {
+      width: 80%;
+    }
+
+    @media (max-width: 320px) {
+      width: 226px;
     }
   }
 
@@ -89,8 +104,8 @@
 }
 
 .reviews__quote-info {
-  grid-row: 2/3;
-  grid-column: 2/3;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 
   p {
     margin: 15px 0 0;
@@ -109,18 +124,14 @@
   }
 }
 
-
 .reviews__button {
   position: absolute;
   z-index: 10;
-  bottom: 214px;
+  top: 59%;
+  transform: translate(0,-50%);
 
   &--prev {
-    left: 24%;
-
-    @include vp-1199 {
-      left: 27px;
-    }
+    left: calc((100% - 560px)/2 - 76px);
 
     @include vp-767 {
       left: 6px;
@@ -128,11 +139,7 @@
   }
 
   &--next {
-    right: 24%;
-
-    @include vp-1199 {
-      right: 27px;
-    }
+    right: calc((100% - 560px)/2 - 76px);
 
     @include vp-767 {
       right: 6px;
@@ -143,14 +150,5 @@
     @include vp-767 {
       height: 19px;
     }
-  }
-
-  @include vp-1199 {
-    bottom: 192px;
-  }
-
-  @include vp-767 {
-    top: 54%;
-    bottom: 0;
   }
 }
