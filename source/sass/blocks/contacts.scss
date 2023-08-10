@@ -119,9 +119,14 @@
     width: max-content;
     outline-color: $color-sapphire;
 
-    @include hover-focus {
-      opacity: 0.8;
-      transition: $trans-default;
+    &:hover,
+    &:focus-visible {
+      border-bottom: 1px solid $color-sapphire;
+      outline: 0;
+    }
+
+    &:active {
+      opacity: 0.7;
     }
   }
 

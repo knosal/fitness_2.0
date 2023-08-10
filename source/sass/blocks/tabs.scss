@@ -33,7 +33,7 @@
   gap: 10px;
 
   @include vp-1199 {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 7px;
     display: grid;
     margin-bottom: 29px;
