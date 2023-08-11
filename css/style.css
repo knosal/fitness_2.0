@@ -1568,26 +1568,24 @@ html {
   border: none;
   border-radius: 50%;
   outline: 1px solid rgba(255, 255, 255, 0);
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-.btn--slider.focus-visible:focus {
+.btn--slider:hover,
+.btn--slider:focus-within {
   outline: 1px solid #102654;
 }
 
-.btn--slider.focus-visible:focus:active {
+.btn--slider:hover:active,
+.btn--slider:focus-within:active {
   background-color: #102654;
 }
 
-.btn--slider.focus-visible:focus:active svg {
+.btn--slider:hover:active svg,
+.btn--slider:focus-within:active svg {
   stroke: #ffffff;
 }
 
 .btn--slider svg {
-  -webkit-transition: stroke 0.3s ease;
-  transition: stroke 0.3s ease;
   stroke: #102654;
 }
 
@@ -1600,7 +1598,7 @@ html {
 }
 
 .btn--slider:disabled svg {
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .btn--empty {
@@ -1648,89 +1646,27 @@ html {
 }
 
 .btn--play {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  background-image: linear-gradient(-120deg, #ed0233 0, #003eb7 100%);
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-
-.btn--play::before {
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100px;
   height: 100px;
-  background-image: linear-gradient(-120deg, #ed0233 0, #003eb7 100%);
-  -webkit-mask-image: url("../../img/sprite/ellipse.svg");
-  mask-image: url("../../img/sprite/ellipse.svg");
-  opacity: 0.8;
   border-radius: 50%;
-  content: "";
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  border: none;
+  background: none url("../img/sprite/video-button-default.svg") no-repeat;
 }
 
 .btn--play.focus-visible:focus {
-  background-color: #ffffff;
-  background-image: none;
-  background-size: 0;
-}
-
-.btn--play.focus-visible:focus::before {
-  background: #102654;
-  opacity: 1;
-}
-
-.btn--play.focus-visible:active {
-  outline: none;
-  -webkit-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
-  transform: translateY(-1px);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  width: 58px;
-  height: 58px;
-  background: #ffffff;
-}
-
-.btn--play.focus-visible:active::before {
-  background: #102654;
-  opacity: 1;
+  background-image: url("../img/sprite/video-button-hover-focus.svg");
 }
 
 .btn--play:active {
-  width: 58px;
-  height: 58px;
-  background: #ffffff;
-}
-
-.btn--play:active::before {
-  background: #102654;
-  opacity: 1;
+  background-image: url("../img/sprite/video-button-active.svg");
 }
 
 .btn--play:disabled {
-  opacity: 0.4;
-  background: #ffffff;
-}
-
-.btn--play:disabled::before {
-  background: #102654;
-  opacity: 0.4;
+  background-image: url("../img/sprite/video-button-disabled.svg");
+  pointer-events: none;
 }
 
 .header {
@@ -1957,27 +1893,16 @@ html {
   transform: translateX(-63px) translateY(-113px);
 }
 
-.video iframe {
-  height: inherit;
-  width: inherit;
+.video video {
+  width: 364px;
+  height: 228px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-.video::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  content: "";
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-
-.video--stop::after {
-  background-color: rgba(20, 54, 122, 0.5);
+.video video[poster] {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .video__button {
@@ -1988,38 +1913,6 @@ html {
   right: 0;
   z-index: 5;
   margin: auto;
-}
-
-.video__button svg {
-  fill: #ffffff;
-  -webkit-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
-}
-
-.video__button.focus-visible:focus svg {
-  fill: #102654;
-}
-
-.video__button.focus-visible:active {
-  outline: none;
-  -webkit-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
-  transform: translateY(-1px);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.video__button.focus-visible:active svg {
-  fill: #102654;
-}
-
-.video__button:active svg {
-  fill: #102654;
-}
-
-.video__button:disabled svg {
-  fill: #102654;
-  opacity: 0.4;
 }
 
 .memberships {
@@ -2039,15 +1932,17 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  margin: 0 auto;
+  padding: 119px 20px 102px;
+  max-width: 1366px;
+  width: 100%;
 }
 
 .memberships__wrapper::after {
   position: absolute;
   content: "";
   right: 0;
-  bottom: -95px;
+  bottom: -92px;
   width: 321px;
   height: 384px;
   background-repeat: no-repeat;
@@ -2313,7 +2208,7 @@ html {
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .event__current {
@@ -2328,7 +2223,7 @@ html {
   -ms-grid-rows: min-content 1fr min-content;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
-  padding: 74px 78px 90px;
+  padding: 76px 78px 90px;
   color: #ffffff;
   background-color: #ed0233;
 }
@@ -2348,8 +2243,7 @@ html {
 
 .event__current h3 {
   margin: 0;
-  margin-bottom: 36px;
-  margin-top: 10px;
+  margin-bottom: 30px;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -2468,7 +2362,6 @@ html {
 
 .coach {
   padding-top: 103px;
-  padding-bottom: 105px;
 }
 
 .coach h2 {
@@ -2788,6 +2681,7 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  line-height: 1;
 }
 
 .advantages__item-info span:first-child {
@@ -2938,7 +2832,7 @@ html {
 }
 
 .promotion__card {
-  padding: 25px 29px 30px;
+  padding: 33px 33px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3063,7 +2957,7 @@ html {
   list-style-type: none;
   font-size: 18px;
   line-height: 24px;
-  gap: 10px;
+  gap: 5px;
 }
 
 .tabs__button {
@@ -3078,7 +2972,7 @@ html {
   align-items: center;
   width: 100%;
   max-width: 260px;
-  padding: 18px 0;
+  padding: 20px 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
@@ -3156,7 +3050,7 @@ html {
 }
 
 .accordion__item {
-  padding: 24px 0;
+  padding: 25px 0;
   border-top: 1px solid rgba(120, 120, 120, 0.2);
 }
 
@@ -3400,15 +3294,19 @@ html {
   outline-color: #102654;
 }
 
-.contacts__content-right a.focus-visible:focus {
-  opacity: 0.8;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+.contacts__content-right a:hover,
+.contacts__content-right a:focus-visible {
+  border-bottom: 1px solid #102654;
+  outline: 0;
+}
+
+.contacts__content-right a:active {
+  opacity: 0.7;
 }
 
 .form {
-  padding-top: 58px;
-  padding-right: 183px;
+  padding-top: 56px;
+  padding-right: 67px;
   padding-bottom: 66px;
   min-height: 337px;
   background-color: #102654;
@@ -3597,7 +3495,7 @@ html {
 .reviews__slider-item blockquote {
   margin: 0 auto;
   padding: 62px 61px 60px 58px;
-  width: 48%;
+  width: 560px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
@@ -3642,17 +3540,22 @@ html {
 }
 
 .reviews__button {
-  position: absolute;
   z-index: 10;
-  bottom: 214px;
+  top: 59%;
 }
 
 .reviews__button--prev {
-  left: 24%;
+  left: calc((100% - 560px) / 2 - 76px);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .reviews__button--next {
-  right: 24%;
+  right: calc((100% - 560px) / 2 - 76px);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .footer {
@@ -3698,7 +3601,7 @@ html {
   gap: 20px;
 }
 
-.footer__navigation ul a {
+.footer__navigation a {
   padding: 10px;
   font-size: 14px;
   font-weight: 400;
@@ -3706,7 +3609,7 @@ html {
   color: #ffffff;
 }
 
-.footer__navigation ul a:focus-visible {
+.footer__navigation a:focus-visible {
   border: 1px solid #ffffff;
   outline: none;
 }
@@ -3831,7 +3734,6 @@ html {
     max-width: 616px;
     margin-left: auto;
     margin-right: 0;
-    padding-right: 0;
   }
 }
 
@@ -3855,20 +3757,12 @@ html {
     padding: 0 45px;
   }
 
-  .btn--play {
-    width: 52px;
-    height: 52px;
-  }
-
-  .btn--play::before {
-    width: 73px;
-    height: 73px;
-    -webkit-mask-image: url("../../img/sprite/ellipse-1199.svg");
-    mask-image: url("../../img/sprite/ellipse-1199.svg");
+  .container--info-group {
+    padding: 0;
   }
 
   .header {
-    padding-top: 40px;
+    padding-top: 36px;
   }
 
   .header__logo svg {
@@ -3888,7 +3782,8 @@ html {
   }
 
   .intro__wrapper p {
-    margin-right: 0;
+    margin-right: 10px;
+    margin-top: 2px;
     font-size: 34px;
     line-height: 34px;
     letter-spacing: 1.02px;
@@ -3931,6 +3826,7 @@ html {
 
   .intro__buy {
     padding: 21px 30px;
+    margin-right: 11px;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
@@ -3996,9 +3892,9 @@ html {
     transform: translateX(207px) translateY(-84px);
   }
 
-  .video__button svg {
-    width: 12px;
-    height: 12px;
+  .video video {
+    width: 266px;
+    height: 167px;
   }
 
   .memberships__wrapper {
@@ -4055,6 +3951,10 @@ html {
 
   .event {
     min-height: 292px;
+  }
+
+  .event__wrapper {
+    padding-top: 101px;
   }
 
   .event__current h2 {
@@ -4128,7 +4028,7 @@ html {
 
   .coach {
     min-height: 423px;
-    padding-top: 100px;
+    padding-top: 95px;
   }
 
   .coach h2 {
@@ -4201,7 +4101,7 @@ html {
   }
 
   .advantages {
-    padding-top: 86px;
+    padding-top: 91px;
     padding-bottom: 90px;
   }
 
@@ -4211,7 +4111,7 @@ html {
   }
 
   .advantages__wrapper h2 {
-    margin-bottom: 39px;
+    margin-bottom: 35px;
   }
 
   .advantages__wrapper {
@@ -4244,6 +4144,7 @@ html {
     width: 442px;
     -ms-grid-column-align: center;
     justify-self: center;
+    margin: 0;
   }
 
   .advantages__item--text p {
@@ -4287,12 +4188,12 @@ html {
   }
 
   .promotion h2 {
-    margin-bottom: 39px;
+    margin-bottom: 46px;
     font-size: 42px;
   }
 
   .promotion {
-    padding-top: 92px;
+    padding-top: 89px;
     padding-bottom: 103px;
   }
 
@@ -4320,13 +4221,17 @@ html {
     padding-bottom: 43px;
   }
 
+  .promotion__card {
+    padding: 33px 35px 30px;
+  }
+
   .promotion__picture img {
     height: 462px;
   }
 
   .faq {
     padding-top: 98px;
-    padding-bottom: 95px;
+    padding-bottom: 99px;
   }
 
   .faq__wrapper h2 {
@@ -4351,6 +4256,9 @@ html {
   .tabs__control {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
     row-gap: 7px;
     display: -ms-grid;
     display: grid;
@@ -4359,7 +4267,16 @@ html {
   }
 
   .tabs__button {
+    padding: 18px 0;
     max-width: none;
+  }
+
+  .accordion__item {
+    padding: 24px 0;
+  }
+
+  .accordion__item h3 {
+    font-weight: 500;
   }
 
   .info-group {
@@ -4432,7 +4349,7 @@ html {
 
   .form__fields {
     gap: 0 60px;
-    margin-bottom: 27px;
+    margin-bottom: 31px;
   }
 
   .reviews h2 {
@@ -4441,29 +4358,21 @@ html {
   }
 
   .reviews h2 {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .reviews {
-    padding-top: 92px;
-    padding-bottom: 99px;
+    padding-top: 90px;
+    padding-bottom: 98px;
   }
 
   .reviews__slider-item blockquote {
-    padding: 62px 62px 60px 61px;
-    width: 83%;
-  }
-
-  .reviews__button--prev {
-    left: 27px;
-  }
-
-  .reviews__button--next {
-    right: 27px;
+    padding: 62px 62px 60px 65px;
+    width: 566px;
   }
 
   .reviews__button {
-    bottom: 192px;
+    top: 58%;
   }
 
   .footer__wrapper {
@@ -4472,12 +4381,13 @@ html {
     -ms-flex-pack: start;
     justify-content: start;
     max-width: 100%;
+    padding-top: 33px;
     gap: 0;
   }
 
   .footer__logo {
     position: absolute;
-    top: 46px;
+    top: 36px;
     left: 0;
     margin: 0;
   }
@@ -4493,19 +4403,15 @@ html {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
+    gap: 31px;
   }
 
-  .footer__navigation ul a {
-    line-height: 20px;
-  }
-
-  .footer__navigation ul a {
+  .footer__navigation a {
     padding: 0;
-    font-size: 16px;
     line-height: 19px;
   }
 
-  .footer__navigation ul a:focus-visible {
+  .footer__navigation a:focus-visible {
     padding: 10px;
   }
 
@@ -4575,6 +4481,7 @@ html {
   }
 
   .intro__wrapper p {
+    margin-right: 0;
     font-size: 28px;
     line-height: 1.5;
     letter-spacing: 1.9px;
@@ -4606,7 +4513,9 @@ html {
   }
 
   .intro__buy {
-    margin-top: 7px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
     -ms-grid-column-align: auto;
     justify-self: auto;
     grid-column: 1/-1;
@@ -4682,8 +4591,15 @@ html {
     width: 100%;
   }
 
+  .video video {
+    width: 320px;
+    height: 167px;
+  }
+
   .memberships__wrapper {
     padding-top: 65px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .memberships__wrapper::after {
@@ -4696,12 +4612,19 @@ html {
     letter-spacing: 0.96px;
   }
 
+  .memberships__wrapper h2 {
+    margin-bottom: 5px;
+  }
+
   .memberships__controls ol {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 33px;
   }
 
   .memberships__button {
+    padding: 12px 2px;
     font-size: 16px;
   }
 
@@ -4829,13 +4752,17 @@ html {
     padding: 0;
   }
 
+  .coach__info p {
+    margin-bottom: 34px;
+  }
+
   .coach__slider {
     padding: 0;
     width: 226px;
   }
 
   .coach__button {
-    top: 50%;
+    top: 52%;
     width: 20px;
     height: 20px;
   }
@@ -4859,7 +4786,7 @@ html {
   }
 
   .advantages__wrapper h2 {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   .advantages__list ul {
@@ -4870,7 +4797,7 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    row-gap: 28px;
+    row-gap: 26px;
   }
 
   .advantages__main-item {
@@ -4894,7 +4821,8 @@ html {
   }
 
   .advantages__item--text h3 {
-    margin-top: 6px;
+    margin-top: 9px;
+    margin-bottom: 4px;
     font-size: 20px;
     line-height: 150%;
     -webkit-transform: none;
@@ -4976,7 +4904,7 @@ html {
   }
 
   .promotion__card {
-    padding: 32px 20px 43px;
+    padding: 42px 20px 43px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -5086,12 +5014,12 @@ html {
   }
 
   .reviews {
-    padding-top: 64px;
-    padding-bottom: 71px;
+    padding-top: 61px;
+    padding-bottom: 70px;
   }
 
   .reviews__slider-item blockquote {
-    width: 78%;
+    width: 90%;
     padding: 43px 25px 31px 25px;
     -ms-grid-columns: 47% auto;
     grid-template-columns: 47% auto;
@@ -5133,13 +5061,16 @@ html {
   }
 
   .reviews__button {
-    top: 54%;
-    bottom: 0;
+    top: 57%;
   }
 
   .footer__wrapper {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  .footer__logo {
+    top: 45px;
   }
 
   .footer__navigation ul {
@@ -5151,18 +5082,38 @@ html {
     column-count: 2;
   }
 
-  .footer__navigation ul li {
+  .footer__navigation li {
     margin-top: 16px;
   }
 
-  .footer__navigation ul li:first-of-type {
+  .footer__navigation li:first-of-type {
     margin-top: 45px;
+  }
+
+  .footer__navigation a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews__slider-item blockquote {
+    width: 87%;
   }
 }
 
 @media (max-width: 500px) {
   .coach__inner {
     margin: 0 auto;
+  }
+
+  .reviews__slider-item blockquote {
+    width: 83%;
+  }
+}
+
+@media (max-width: 450px) {
+  .reviews__slider-item blockquote {
+    width: 80%;
   }
 }
 
@@ -5203,24 +5154,23 @@ html {
   }
 
   .subscriptions__price {
-    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-bottom: 21px;
+    gap: 18px;
   }
 
   .event__wrapper {
-    padding-top: 67px;
+    padding-top: 70px;
   }
 
   .coach {
-    padding-top: 61px;
-  }
-
-  .advantages__item--text h3 {
-    margin-top: 0;
+    padding-top: 57px;
+    padding-bottom: 21px;
   }
 
   .promotion {
-    padding-top: 68px;
-    padding-bottom: 80px;
+    padding-top: 64px;
+    padding-bottom: 70px;
   }
 
   .promotion__wrapper {
@@ -5277,14 +5227,13 @@ html {
     padding: 19px 0;
   }
 
+  .reviews__slider-item blockquote {
+    width: 226px;
+  }
+
   .footer__wrapper {
     gap: 11px;
-  }
-}
-
-@media (max-width: 319px) {
-  .subscriptions__title h3 {
-    font-size: 16px;
+    padding-top: 43px;
   }
 }
 
@@ -5303,24 +5252,6 @@ html {
 }
 
 @media (hover: hover) {
-  .btn--slider:hover:not(.focus-visible) {
-    outline: none;
-    -webkit-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    transform: translateY(-1px);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    outline: 1px solid #102654;
-  }
-
-  .btn--slider:hover:not(.focus-visible):active {
-    background-color: #102654;
-  }
-
-  .btn--slider:hover:not(.focus-visible):active svg {
-    stroke: #ffffff;
-  }
-
   .btn--empty:hover:not(.focus-visible) {
     outline: none;
     -webkit-transform: translateY(-1px);
@@ -5360,14 +5291,7 @@ html {
     transform: translateY(-1px);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background-color: #ffffff;
-    background-image: none;
-    background-size: 0;
-  }
-
-  .btn--play:hover:not(.focus-visible)::before {
-    background: #102654;
-    opacity: 1;
+    background-image: url("../img/sprite/video-button-hover-focus.svg");
   }
 
   .header__phone:hover:not(.focus-visible) {
@@ -5378,19 +5302,6 @@ html {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     opacity: 0.8;
-  }
-
-  .video__button:hover:not(.focus-visible) {
-    outline: none;
-    -webkit-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    transform: translateY(-1px);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .video__button:hover:not(.focus-visible) svg {
-    fill: #102654;
   }
 
   .memberships__button:hover:not(.focus-visible) {
@@ -5502,18 +5413,6 @@ html {
     background-color: #ffffff;
   }
 
-  .contacts__content-right a:hover:not(.focus-visible) {
-    outline: none;
-    -webkit-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    transform: translateY(-1px);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-
   .form__fields input:hover:not(.focus-visible) {
     outline: none;
     -webkit-transform: translateY(-1px);
@@ -5524,7 +5423,7 @@ html {
     border-bottom-color: #ffffff;
   }
 
-  .footer__navigation ul a:hover:not(.focus-visible) {
+  .footer__navigation a:hover:not(.focus-visible) {
     outline: none;
     -webkit-transform: translateY(-1px);
     -ms-transform: translateY(-1px);
@@ -5535,7 +5434,7 @@ html {
     text-underline-offset: 10px;
   }
 
-  .footer__navigation ul a:hover:not(.focus-visible):active {
+  .footer__navigation a:hover:not(.focus-visible):active {
     text-decoration: none;
   }
 

@@ -81,23 +81,10 @@
                   <source media="(max-width: 1199px)" srcset="img/gym/gym-tablet.jpg 1x, img/gym/gym-tablet@2x.jpg 2x" width="678" height="345" />
                   <img src="img/gym/gym-desktop.jpg" srcset="img/gym/gym-desktop@2x.jpg" width="660" height="401" alt="Фотография тренажёрного зала в фитнес-клубе Supergym." />
                 </picture>
-                <div class="video video--stop" data-video>
-                  <a data-video-link href="https://youtu.be/9TZXsZItgdw">
-                    <picture>
-                      <source type="image/webp" media="(max-width: 767px)" srcset="img/gym/gym-video-mobile.webp 1x, img/gym/gym-video-mobile@2x.webp 2x" width="320" height="167" />
-                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym/gym-video-tablet.webp 1x, img/gym/gym-video-tablet@2x.webp 2x" width="266" height="167" />
-                      <source type="image/webp" srcset="img/gym/gym-video-desktop.webp 1x, img/gym/gym-video-desktop@2x.webp 2x" width="364" height="228" />
 
-                      <source media="(max-width: 767px)" srcset="img/gym/gym-video-mobile.jpg 1x, img/gym/gym-video-mobile@2x.jpg 2x" width="320" height="167" />
-                      <source media="(max-width: 1199px)" srcset="img/gym/gym-video-tablet.jpg 1x, img/gym/gym-video-tablet@2x.jpg 2x" width="266" height="167" />
-                      <img src="https://i.ytimg.com/vi/9TZXsZItgdw/maxresdefault.jpg" srcset="img/gym/gym-video-desktop@2x.jpg" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
-                    </picture>
-                  </a>
-                  <button class="video__button btn btn--play" type="button" data-video-button aria-label="Кнопка запустить видео.">
-                    <svg width="14" height="16" aria-hidden="true">
-                      <use href="img/sprite.svg#video-button" />
-                    </svg>
-                  </button>
+                <div class="video" data-name="video-wrapper">
+                  <video class="video__content" preload="auto" playsinline src="./img/html-academy-courses.mp4" poster="./img/gym/video-poster.webp"></video>
+                  <button class="video__button btn btn--play" type="button" data-btn="video" aria-label="Воспроизвести видео."></button>
                 </div>
               </div>
             </div>
@@ -105,141 +92,139 @@
         </section>
 
         <section class="memberships" id="subscription">
-          <div class="container">
-            <div class="memberships__wrapper">
-              <h2>Абонементы</h2>
-              <div class="memberships__controls" aria-label="Срок абонементов.">
-                <ol>
-                  <li><button class="memberships__button is-active" type="button" data-month="1" aria-label="1 месяц">1&nbsp;месяц</button></li>
-                  <li><button class="memberships__button" type="button" data-month="2" aria-label="6 месяцев">6&nbsp;месяцев</button></li>
-                  <li><button class="memberships__button" type="button" data-month="3" aria-label="12 месяцев">12&nbsp;месяцев</button></li>
-                </ol>
-              </div>
-              <div class="memberships__content subscriptions">
-                <ul class="subscriptions__list" aria-label="Абонемент на 1 месяц." data-list="1">
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>С&nbsp;тренером</h3>
-                      <p>12&nbsp;занятий</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="5000">
-                      <span>5000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>Дневной</h3>
-                      <p>с 8:00 до&nbsp;17:00</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="1700">
-                      <span>1700</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>Полный день</h3>
-                      <p>с 8:00 до&nbsp;22:00</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="2700">
-                      <span>2700</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                </ul>
-                <ul class="subscriptions__list" aria-label="Абонемент на 6 месяцев." data-list="2">
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>С&nbsp;тренером</h3>
-                      <p>12&nbsp;занятий</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="8000">
-                      <span>8000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                  <li class="subscriptions__item is-active">
-                    <div class="subscriptions__title">
-                      <h3>Дневной</h3>
-                      <p>с 8:00 до&nbsp;17:00</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="4000">
-                      <span>4000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>Полный день</h3>
-                      <p>с 8:00 до&nbsp;22:00</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="9000">
-                      <span>9000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                </ul>
-                <ul class="subscriptions__list" aria-label="Абонемент на 12 месяцев." data-list="3">
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>С&nbsp;тренером</h3>
-                      <p>12&nbsp;занятий</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="10000">
-                      <span>10000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                  <li class="subscriptions__item is-active">
-                    <div class="subscriptions__title">
-                      <h3>Дневной</h3>
-                      <p>с 8:00 до&nbsp;17:00</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="7000">
-                      <span>7000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                  <li class="subscriptions__item">
-                    <div class="subscriptions__title">
-                      <h3>Полный день</h3>
-                      <p>с 8:00 до&nbsp;22:00</p>
-                    </div>
-                    <div class="subscriptions__price" data-text="12000">
-                      <span>12000</span>
-                      <svg width="30" height="42" focusable="false" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#rubble"></use>
-                      </svg>
-                    </div>
-                    <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
-                  </li>
-                </ul>
-              </div>
+          <div class="memberships__wrapper">
+            <h2>Абонементы</h2>
+            <div class="memberships__controls" aria-label="Срок абонементов.">
+              <ol>
+                <li><button class="memberships__button is-active" type="button" data-month="1" aria-label="1 месяц">1&nbsp;месяц</button></li>
+                <li><button class="memberships__button" type="button" data-month="2" aria-label="6 месяцев">6&nbsp;месяцев</button></li>
+                <li><button class="memberships__button" type="button" data-month="3" aria-label="12 месяцев">12&nbsp;месяцев</button></li>
+              </ol>
+            </div>
+            <div class="memberships__content subscriptions">
+              <ul class="subscriptions__list" aria-label="Абонемент на 1 месяц." data-list="1">
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>С&nbsp;тренером</h3>
+                    <p>12&nbsp;занятий</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="5000">
+                    <span>5000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>Дневной</h3>
+                    <p>с 8:00 до&nbsp;17:00</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="1700">
+                    <span>1700</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>Полный день</h3>
+                    <p>с 8:00 до&nbsp;22:00</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="2700">
+                    <span>2700</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+              </ul>
+              <ul class="subscriptions__list" aria-label="Абонемент на 6 месяцев." data-list="2">
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>С&nbsp;тренером</h3>
+                    <p>12&nbsp;занятий</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="8000">
+                    <span>8000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item is-active">
+                  <div class="subscriptions__title">
+                    <h3>Дневной</h3>
+                    <p>с 8:00 до&nbsp;17:00</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="4000">
+                    <span>4000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>Полный день</h3>
+                    <p>с 8:00 до&nbsp;22:00</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="9000">
+                    <span>9000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+              </ul>
+              <ul class="subscriptions__list" aria-label="Абонемент на 12 месяцев." data-list="3">
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>С&nbsp;тренером</h3>
+                    <p>12&nbsp;занятий</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="10000">
+                    <span>10000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item is-active">
+                  <div class="subscriptions__title">
+                    <h3>Дневной</h3>
+                    <p>с 8:00 до&nbsp;17:00</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="7000">
+                    <span>7000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+                <li class="subscriptions__item">
+                  <div class="subscriptions__title">
+                    <h3>Полный день</h3>
+                    <p>с 8:00 до&nbsp;22:00</p>
+                  </div>
+                  <div class="subscriptions__price" data-text="12000">
+                    <span>12000</span>
+                    <svg width="30" height="42" focusable="false" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#rubble"></use>
+                    </svg>
+                  </div>
+                  <a class="subscriptions__buy btn btn--background" href="#">Купить абонемент</a>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -588,7 +573,7 @@
             </div>
             <div class="promotion__card">
               <p>Месяц бесплатно</p>
-              <span>Приведи друга, получи абонемент в&nbsp;подарок</span>
+              <span>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</span>
               <a href="#!">подробнее</a>
             </div>
             <div class="promotion__card">
@@ -729,7 +714,7 @@
                       </picture>
                       <cite>Анна Орлова</cite>
                       <div class="reviews__quote-info">
-                        <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей&raquo;</p>
+                        <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                       </div>
                     </blockquote>
                   </div>
@@ -752,17 +737,17 @@
                 </li>
               </ul>
             </div>
+            <button class="reviews__button reviews__button--prev btn btn--slider" type="button" aria-label="Перелистнуть назад.">
+              <svg width="16" height="32" viewBox="0 0 16 32">
+                <use href="img/sprite.svg#slider-arrow-prev" />
+              </svg>
+            </button>
+            <button class="reviews__button reviews__button--next btn btn--slider" type="button" aria-label="Перелистнуть вперёд.">
+              <svg width="16" height="32" viewBox="0 0 16 32">
+                <use href="img/sprite.svg#slider-arrow-next" />
+              </svg>
+            </button>
           </div>
-          <button class="reviews__button reviews__button--prev btn btn--slider" type="button" aria-label="Перелистнуть назад.">
-            <svg width="16" height="32" viewBox="0 0 16 32">
-              <use href="img/sprite.svg#slider-arrow-prev" />
-            </svg>
-          </button>
-          <button class="reviews__button reviews__button--next btn btn--slider" type="button" aria-label="Перелистнуть вперёд.">
-            <svg width="16" height="32" viewBox="0 0 16 32">
-              <use href="img/sprite.svg#slider-arrow-next" />
-            </svg>
-          </button>
         </section>
 
         <section class="info-group">
