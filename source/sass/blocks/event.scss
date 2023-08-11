@@ -16,7 +16,11 @@
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 120px;
+
+  @include vp-1199 {
+    padding-top: 101px;
+  }
 
   @include vp-767 {
     flex-direction: column;
@@ -25,7 +29,7 @@
   }
 
   @media (max-width: 320px) {
-    padding-top: 67px;
+    padding-top: 70px;
   }
 }
 
@@ -36,7 +40,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: min-content 1fr min-content;
-  padding: 74px 78px 90px;
+  padding: 76px 78px 90px;
 
   color: $color-default-white;
 
@@ -64,8 +68,7 @@
 
   h3 {
     margin: 0;
-    margin-bottom: 36px;
-    margin-top: 10px;
+    margin-bottom: 30px;
     grid-row: 2 / 3;
     grid-column: 1/-1;
 

@@ -82,23 +82,9 @@
                   <img src="img/gym/gym-desktop.jpg" srcset="img/gym/gym-desktop@2x.jpg" width="660" height="401" alt="Фотография тренажёрного зала в фитнес-клубе Supergym." />
                 </picture>
 
-                <div class="video is-disabled" data-video>
-                  <a data-video-link href="https://youtu.be/9TZXsZItgdw">
-                    <picture>
-                      <source type="image/webp" media="(max-width: 767px)" srcset="img/gym/gym-video-mobile.webp 1x, img/gym/gym-video-mobile@2x.webp 2x" width="320" height="167" />
-                      <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym/gym-video-tablet.webp 1x, img/gym/gym-video-tablet@2x.webp 2x" width="266" height="167" />
-                      <source type="image/webp" srcset="img/gym/gym-video-desktop.webp 1x, img/gym/gym-video-desktop@2x.webp 2x" width="364" height="228" />
-
-                      <source media="(max-width: 767px)" srcset="img/gym/gym-video-mobile.jpg 1x, img/gym/gym-video-mobile@2x.jpg 2x" width="320" height="167" />
-                      <source media="(max-width: 1199px)" srcset="img/gym/gym-video-tablet.jpg 1x, img/gym/gym-video-tablet@2x.jpg 2x" width="266" height="167" />
-                      <img src="https://i.ytimg.com/vi/9TZXsZItgdw/maxresdefault.jpg" srcset="img/gym/gym-video-desktop@2x.jpg" width="364" height="228" alt="Видео спортивного зала" loading="lazy" data-video-media />
-                    </picture>
-                  </a>
-                  <button class="video__button btn btn--play" type="button" data-video-button aria-label="Кнопка запустить видео.">
-                    <svg width="100" height="100" aria-hidden="true">
-                      <use href="img/sprite.svg#video-button-default" />
-                    </svg>
-                  </button>
+                <div class="video" data-name="video-wrapper">
+                  <video class="video__content" preload="auto" playsinline src="./img/html-academy-courses.mp4" poster="./img/gym/video-poster.webp"></video>
+                  <button class="video__button btn btn--play" type="button" data-btn="video" aria-label="Воспроизвести видео."></button>
                 </div>
               </div>
             </div>
@@ -587,7 +573,7 @@
             </div>
             <div class="promotion__card">
               <p>Месяц бесплатно</p>
-              <span>Приведи друга, получи абонемент в&nbsp;подарок</span>
+              <span>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</span>
               <a href="#!">подробнее</a>
             </div>
             <div class="promotion__card">
@@ -728,7 +714,7 @@
                       </picture>
                       <cite>Анна Орлова</cite>
                       <div class="reviews__quote-info">
-                        <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей&raquo;</p>
+                        <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                       </div>
                     </blockquote>
                   </div>

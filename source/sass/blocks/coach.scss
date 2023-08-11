@@ -1,11 +1,9 @@
 .coach {
   padding-top: 103px;
-  padding-bottom: 105px;
-
 
   @include vp-1199 {
     min-height: 423px;
-    padding-top: 100px;
+    padding-top: 95px;
   }
 
   @include vp-767 {
@@ -14,7 +12,8 @@
   }
 
   @media (max-width: 320px) {
-    padding-top: 61px;
+    padding-top: 57px;
+    padding-bottom: 21px;
   }
 
   h2 {
@@ -198,6 +197,10 @@
     @include vp-1199 {
       margin-left: -5px;
     }
+
+    @include vp-767 {
+      margin-bottom: 34px;
+    }
   }
 
   ul {
@@ -282,7 +285,7 @@
   }
 
   @include vp-767 {
-    top: 50%;
+    top: 52%;
     width: 20px;
     height: 20px;
   }
@@ -302,7 +305,6 @@
       left: 10px;
     }
   }
-
 
   @media (min-width: $vp-1200) and (max-width: 1360px) {
     &--prev {

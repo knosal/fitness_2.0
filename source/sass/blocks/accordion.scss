@@ -12,8 +12,12 @@
 }
 
 .accordion__item {
-  padding: 24px 0;
+  padding: 25px 0;
   border-top: 1px solid $color-border-grey;
+
+  @include vp-1199 {
+    padding: 24px 0;
+  }
 
   h3 {
     margin: 0;
@@ -31,6 +35,10 @@
 
     &::-webkit-details-marker {
       display: none;
+    }
+
+    @include vp-1199 {
+      font-weight: 500;
     }
 
     @media (max-width: 320px) {

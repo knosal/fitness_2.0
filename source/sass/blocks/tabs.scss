@@ -30,10 +30,11 @@
   font-size: 18px;
   line-height: 24px;
 
-  gap: 10px;
+  gap: 5px;
 
   @include vp-1199 {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
     row-gap: 7px;
     display: grid;
     margin-bottom: 29px;
@@ -58,7 +59,7 @@
   align-items: center;
   width: 100%;
   max-width: 260px;
-  padding: 18px 0;
+  padding: 20px 0;
 
   font-weight: 500;
   font-size: 18px;
@@ -72,6 +73,7 @@
   user-select: none;
 
   @include vp-1199 {
+    padding: 18px 0;
     max-width: none;
   }
 

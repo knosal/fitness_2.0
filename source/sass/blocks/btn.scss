@@ -40,16 +40,14 @@
     border: none;
     border-radius: 50%;
     outline: 1px solid $color-transparent;
-    cursor: pointer;
-
-    transition: all $trans-default;
 
     @include vp-767 {
       width: 30px;
       height: 30px;
     }
 
-    @include hover-focus {
+    &:hover,
+    &:focus-within {
       outline: 1px solid $color-sapphire;
 
       &:active {
@@ -62,8 +60,6 @@
     }
 
     svg {
-      transition: stroke $trans-default;
-
       @include vp-767 {
         height: 19px;
       }
@@ -158,79 +154,5 @@
       background-image: url("../img/sprite/video-button-disabled.svg");
       pointer-events: none;
     }
-/*
-
-    &::before {
-      position: absolute;
-
-      width: 100px;
-      height: 100px;
-      background-image: $color-button-video;
-      mask-image: url("../../img/sprite/ellipse.svg");
-      opacity: 0.8;
-      border-radius: 50%;
-
-      content: "";
-      transition: opacity $trans-default;
-    }
-
-    @include hover-focus {
-      background-color: $color-default-white;
-      background-image: none;
-      background-size: 0;
-
-      &::before {
-        background: $color-sapphire;
-        opacity: 1;
-      }
-    }
-
-    @include active {
-      width: 58px;
-      height: 58px;
-      background: $color-default-white;
-
-      &::before {
-        background: $color-sapphire;
-        opacity: 1;
-      }
-    }
-
-    &:active {
-      width: 58px;
-      height: 58px;
-      background: $color-default-white;
-
-      &::before {
-        background: $color-sapphire;
-        opacity: 1;
-      }
-    }
-
-    &:disabled {
-      opacity: 0.4;
-      background: $color-default-white;
-
-      &::before {
-        background: $color-sapphire;
-        opacity: 0.4;
-      }
-    }
-
-    @include vp-1199 {
-      width: 52px;
-      height: 52px;
-
-      &::before {
-        width: 73px;
-        height: 73px;
-
-        border-image: $color-border-gradient;
-        border-image-width: 2px;
-        border-image-slice: 4;
-
-        //mask-image: url("../../img/background/ellipse-1199.svg");
-      }
-    }*/
   }
 }
