@@ -2,10 +2,10 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {priceChange} from './modules/subscription/subscription-tabs';
 import {initSwiper} from './modules/swiper/slider';
+import './modules/video/init-video.js';
 import {tabChangeTopic} from './modules/accordion/faq-topic';
 import {openAccordion, focusAccordion} from './modules/accordion/faq-accordion';
-import {findAllVideos} from './modules/video/gym-video';
-// import {createScript} from './modules/dev';
+import {createScript} from './modules/dev';
 
 // ---------------------------------
 
@@ -21,14 +21,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('load', () => {
 
-    findAllVideos();
     priceChange();
-
     openAccordion();
     focusAccordion();
     tabChangeTopic();
     initSwiper();
-    // createScript();
+    createScript();
     const form = new Form();
     window.form = form;
     form.init();
