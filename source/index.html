@@ -230,53 +230,34 @@
         </section>
 
         <section class="event">
-          <div class="container">
-            <div class="event__wrapper">
-              <div class="event__current">
-                <h2>Super <br />games</h2>
-                <h3>Ежегодные соревнования по&nbsp;CrossFit</h3>
-                <div class="event__info">
-                  <dl>
-                    <dt>Дата</dt>
-                    <dd>
-                      <div class="event__day">
-                        <span>7</span>
-                      </div>
-                      <div class="event__month">
-                        <span>Марта</span>
-                      </div>
-                      <div class="event__year">
-                        <span>2019</span>
-                      </div>
-                    </dd>
-                    <dt>Время</dt>
-                    <dd>
-                      <div class="event__time">
-                        <time datetime="12:00">12:00</time>
-                      </div>
-                    </dd>
-                  </dl>
-                </div>
-                <a class="event__buy btn btn--empty" href="#">Заполнить заявку</a>
-              </div>
-
-              <div class="event__promo">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/event/event-mobile.webp 1x, img/event/event-mobile@2x.webp 2x" width="290" height="292" />
-                  <source type="image/webp" media="(max-width: 1199px)" srcset="img/event/event-tablet.webp 1x, img/event/event-tablet@2x.webp 2x" width="386" height="292" />
-                  <source type="image/webp" srcset="img/event/event-desktop.webp 1x, img/event/event-desktop@2x.webp 2x" width="660" height="500" />
-
-                  <source media="(max-width: 767px)" srcset="img/event/event-mobile.jpg 1x, img/event/event-mobile@2x.jpg 2x" width="290" height="292" />
-                  <source media="(max-width: 1199px)" srcset="img/event/event-tablet.jpg 1x, img/event/event-tablet@2x.jpg 2x" width="386" height="292" />
-                  <img src="img/event/event-desktop.jpg" srcset="img/event/event-desktop@2x.jpg" width="660" height="500" alt="Промо предстоящего мероприятия" />
-                </picture>
-              </div>
-            </div>
+          <div class="event__info">
+            <h2>SUPER<br />GAMES</h2>
+            <dl class="event__date">
+              <dt>Дата</dt>
+              <dd>
+                7<span>Марта<br />2019</span>
+              </dd>
+            </dl>
+            <dl class="event__time">
+              <dt>Время</dt>
+              <dd>12:00</dd>
+            </dl>
+            <p>Ежегодные соревнования по&nbsp;CrossFit</p>
+            <a class="event__buy btn btn--empty" href="#">Заполнить заявку</a>
           </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/event/event-mobile.webp 1x, img/event/event-mobile@2x.webp 2x" width="290" height="292" />
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/event/event-tablet.webp 1x, img/event/event-tablet@2x.webp 2x" width="386" height="292" />
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/event/event-desktop.webp 1x, img/event/event-desktop@2x.webp 2x" width="660" height="500" />
+
+            <source media="(max-width: 767px)" srcset="img/event/event-mobile.jpg 1x, img/event/event-mobile@2x.jpg 2x" width="290" height="292" />
+            <source media="(max-width: 1199px)" srcset="img/event/event-tablet.jpg 1x, img/event/event-tablet@2x.jpg 2x" width="386" height="292" />
+            <img src="img/event/event-desktop.jpg" srcset="img/event/event-desktop@2x.jpg" width="660" height="500" alt="Промо предстоящего мероприятия" />
+          </picture>
         </section>
 
         <section class="coach">
-          <div class="coach__wrapper">
+          <div class="coach__wrapper container">
             <div class="coach__title">
               <h2>Тренеры</h2>
             </div>
@@ -287,7 +268,7 @@
             </button>
             <div class="swiper coach__slider">
               <ul class="swiper-wrapper">
-                <li class="swiper-slide">
+                <li class="swiper-slide coach__slide">
                   <div class="coach__inner">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/coach/coach-anna-mobile.webp 1x, img/coach/coach-anna-mobile@2x.webp 2x" width="226" height="274" />

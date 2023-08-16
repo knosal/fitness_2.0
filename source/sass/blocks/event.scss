@@ -1,246 +1,222 @@
 .event {
-  min-height: 500px;
-
-  @include vp-1199 {
-    min-height: 292px;
-  }
-
-  @include vp-767 {
-    min-height: 584px;
-  }
-}
-
-.event__wrapper {
+  padding: 120px 0 58px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 120px;
-
-  @include vp-1199 {
-    padding-top: 101px;
-  }
-
-  @include vp-767 {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    max-width: 500px;
-  }
-
-  @media (max-width: 320px) {
-    padding-top: 70px;
-  }
-}
-
-.event__current {
-  min-height: 500px;
-  min-width: 43%;
-  max-width: 660px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: min-content 1fr min-content;
-  padding: 76px 78px 90px;
-
-  color: $color-default-white;
-
-  background-color: $color-red;
+  justify-content: center;
 
   h2 {
-    margin: 11px 0 0;
-
     font-family: $ff-alumni;
-    font-size: 82px;
+    font-size: 72px;
     font-weight: 600;
-    line-height: 96%;
-    letter-spacing: 2.46px;
+    line-height: 110%;
+    letter-spacing: 6.5px;
     text-transform: uppercase;
 
-    transform: translateX(10px);
+    color: $color-default-white;
+    margin: 0;
+    padding-left: 12px;
+    text-align: center;
+
+    grid-row: 1 / 3;
 
     @include vp-1199 {
       font-size: 48px;
-      letter-spacing: 1.44px;
-
-      transform: translateX(7px);
+      line-height: 95%;
+      letter-spacing: 1.3px;
+      padding-left: 6px;
     }
   }
 
-  h3 {
+  dl {
     margin: 0;
-    margin-bottom: 30px;
-    grid-row: 2 / 3;
-    grid-column: 1/-1;
+    grid-column: 2 / 3;
+    height: max-content;
+  }
+
+
+  picture {
+    background-color: #000145;
+  }
+
+  img {
+    height: 100%;
+    object-fit: fill;
+  }
+
+  p {
+    margin: 0 0 26px;
+    grid-column: 1 / 3;
 
     font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
+    line-height: 18px;
 
     @include vp-1199 {
+      margin-bottom: 24px;
+      padding-top: 2px;
       font-size: 12px;
     }
-  }
 
-  @media (max-width: 1365px) {
-    min-width: 660px;
+    @include vp-767 {
+      margin-bottom: 30px;
+      padding-top: 6px;
+    }
   }
 
   @include vp-1199 {
-    min-height: 292px;
-    min-width: 43%;
-    max-width: 386px;
-    padding: 41px 45px 49px;
-    grid-template-rows: min-content 1fr min-content;
+    padding: 100px 36px;
+    padding-bottom: 0;
   }
 
   @include vp-767 {
-    width: 100%;
-    max-width: 500px;
-    min-width: unset;
+    padding: 70px 0 60px;
   }
 }
 
 .event__info {
-  margin-top: 2px;
-  grid-column: -2/-1;
-  align-self: center;
+  padding: 84px 78px;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: repeat(4, auto);
+  width: 500px;
+  gap: 17px 62px;
+  color: $color-default-white;
+  background-color: $color-red;
 
-  dl {
-    margin: 0;
-    margin-top: 3px;
-    display: grid;
-    grid-template-rows: min-content min-content 9px min-content min-content;
-
-    @include vp-1199 {
-      margin-top: 7px;
-      grid-template-rows: min-content min-content 1px min-content min-content;
-    }
+  @include vp-1199 {
+    padding: 51px 45px;
+    width: 292px;
+    gap: 3px 35px;
   }
 
-  dt {
-    font-size: 18px;
-    line-height: 150%;
+  @include vp-767 {
+    padding-bottom: 52px;
+    width: 290px;
+  }
+}
 
-    &:last-of-type {
-      grid-row: 4 / 5;
+.event__date {
+  dt {
+    position: relative;
+    margin: 0 0 12px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -9px;
+      width: 64px;
+      height: 1px;
+      background-color: $color-default-white;
     }
 
+    font-size: 18px;
+    line-height: 18px;
+
     @include vp-1199 {
+      margin-top: -4px;
+      margin-bottom: 5px;
       font-size: 12px;
-      line-height: 124%;
+
+      &::after {
+        width: 42px;
+        bottom: -2px;
+      }
     }
   }
 
   dd {
-    position: relative;
-
-    display: grid;
-    grid-template-columns: 29% auto;
-    grid-template-rows: 13px auto auto auto;
     margin: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
 
-    &::before {
-      position: absolute;
-      top: 1px;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
 
-      width: 100%;
-      height: 1px;
-
-      background-color: $color-default-white;
-
-      content: "";
-    }
-
-    &:first-of-type {
-      &::before {
-        width: 70%;
-      }
-    }
-
-    &:last-of-type {
-      grid-row: 5 / 6;
-
-      font-size: 40px;
-      font-weight: 700;
-      line-height: 150%;
-
-      @include vp-1199 {
-        font-size: 24px;
-      }
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 24px;
     }
 
     @include vp-1199 {
-      grid-template-rows: 6px min-content min-content min-content;
+      align-items: flex-start;
+      column-gap: 4px;
     }
   }
-}
 
-.event__day {
-  grid-row: 1/-1;
+  span {
+    font-size: 14px;
 
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 150%;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 18px;
+    width: min-content;
 
-  @include vp-1199 {
-    font-size: 24px;
-  }
-}
-
-.event__month {
-  grid-row: 2 / 3;
-}
-
-.event__year {
-  grid-row: 3 / 4;
-}
-
-.event__month,
-.event__year {
-  font-size: 14px;
-  line-height: 16px;
-
-  @include vp-1199 {
-    font-size: 10px;
-    line-height: 12px;
+    @include vp-1199 {
+      margin: 0;
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
 }
 
 .event__time {
-  grid-row: 1/-1;
-}
+  dt {
+    position: relative;
 
-.event__buy {
-  grid-row: -1/-2;
-  grid-column: 1/-1;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -9px;
+      width: 88px;
+      height: 1px;
+      background-color: $color-default-white;
+    }
 
-  @include vp-1199 {
-    padding: 13px 45px;
+    font-size: 18px;
+    line-height: 18px;
 
-    font-size: 10px;
-    letter-spacing: 0.5px;
+    @include vp-1199 {
+      margin-bottom: 0;
+      padding-top: 0;
+      font-size: 12px;
+
+      &::after {
+        width: 56px;
+        bottom: -3px;
+      }
+    }
+  }
+
+  dd {
+    margin: 14px 0 0;
+
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include vp-1199 {
+      margin-top: -5px;
+      padding-top: 10px;
+    }
   }
 }
 
-.event__promo {
-  margin: 0;
-  z-index: 1;
+.event__buy {
+  padding: 25px 20px;
+  grid-column: 1 / 3;
+  line-height: 12px;
+  letter-spacing: 0.05em;
 
-  img {
-    max-width: 100%;
-    height: auto;
-    background-color: $color-background-color;
-
-    @include vp-1199 {
-      max-width: 386px;
-      width: auto;
-      height: 100%;
-    }
-
-    @include vp-767 {
-      flex-basis: 100%;
-      width: 100%;
-      max-width: 100%;
-    }
+  @include vp-1199 {
+    padding: 12px 20px;
+    font-size: 10px;
   }
 }
